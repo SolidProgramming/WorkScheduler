@@ -30,6 +30,37 @@
         {
             this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
@@ -38,37 +69,6 @@
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel29 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
             this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
             this.customEmployeeControl2 = new CustomEmployeeControl.CustomEmployeeControl();
             this.customEmployeeControl3 = new CustomEmployeeControl.CustomEmployeeControl();
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -160,6 +160,316 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1585, 22);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // metroLabel31
+            // 
+            this.metroLabel31.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel31.Location = new System.Drawing.Point(1534, 1);
+            this.metroLabel31.Name = "metroLabel31";
+            this.metroLabel31.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel31.TabIndex = 30;
+            this.metroLabel31.Text = "31";
+            this.metroLabel31.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel30
+            // 
+            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel30.Location = new System.Drawing.Point(1483, 1);
+            this.metroLabel30.Name = "metroLabel30";
+            this.metroLabel30.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel30.TabIndex = 29;
+            this.metroLabel30.Text = "30";
+            this.metroLabel30.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel29
+            // 
+            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel29.Location = new System.Drawing.Point(1432, 1);
+            this.metroLabel29.Name = "metroLabel29";
+            this.metroLabel29.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel29.TabIndex = 28;
+            this.metroLabel29.Text = "29";
+            this.metroLabel29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel28
+            // 
+            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel28.Location = new System.Drawing.Point(1381, 1);
+            this.metroLabel28.Name = "metroLabel28";
+            this.metroLabel28.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel28.TabIndex = 27;
+            this.metroLabel28.Text = "28";
+            this.metroLabel28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel27
+            // 
+            this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel27.Location = new System.Drawing.Point(1330, 1);
+            this.metroLabel27.Name = "metroLabel27";
+            this.metroLabel27.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel27.TabIndex = 26;
+            this.metroLabel27.Text = "27";
+            this.metroLabel27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel26.Location = new System.Drawing.Point(1279, 1);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel26.TabIndex = 25;
+            this.metroLabel26.Text = "26";
+            this.metroLabel26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel25
+            // 
+            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel25.Location = new System.Drawing.Point(1228, 1);
+            this.metroLabel25.Name = "metroLabel25";
+            this.metroLabel25.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel25.TabIndex = 24;
+            this.metroLabel25.Text = "25";
+            this.metroLabel25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel24.Location = new System.Drawing.Point(1177, 1);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel24.TabIndex = 23;
+            this.metroLabel24.Text = "24";
+            this.metroLabel24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel23
+            // 
+            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel23.Location = new System.Drawing.Point(1126, 1);
+            this.metroLabel23.Name = "metroLabel23";
+            this.metroLabel23.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel23.TabIndex = 22;
+            this.metroLabel23.Text = "23";
+            this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel22.Location = new System.Drawing.Point(1075, 1);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel22.TabIndex = 21;
+            this.metroLabel22.Text = "22";
+            this.metroLabel22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel21
+            // 
+            this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel21.Location = new System.Drawing.Point(1024, 1);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel21.TabIndex = 20;
+            this.metroLabel21.Text = "21";
+            this.metroLabel21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel20.Location = new System.Drawing.Point(973, 1);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel20.TabIndex = 19;
+            this.metroLabel20.Text = "20";
+            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel19.Location = new System.Drawing.Point(922, 1);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel19.TabIndex = 18;
+            this.metroLabel19.Text = "19";
+            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel18.Location = new System.Drawing.Point(871, 1);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel18.TabIndex = 17;
+            this.metroLabel18.Text = "18";
+            this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel17.Location = new System.Drawing.Point(820, 1);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel17.TabIndex = 16;
+            this.metroLabel17.Text = "17";
+            this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel16.Location = new System.Drawing.Point(769, 1);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel16.TabIndex = 15;
+            this.metroLabel16.Text = "16";
+            this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel15.Location = new System.Drawing.Point(718, 1);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel15.TabIndex = 14;
+            this.metroLabel15.Text = "15";
+            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel14.Location = new System.Drawing.Point(667, 1);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel14.TabIndex = 13;
+            this.metroLabel14.Text = "14";
+            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel13.Location = new System.Drawing.Point(616, 1);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel13.TabIndex = 12;
+            this.metroLabel13.Text = "13";
+            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel12.Location = new System.Drawing.Point(565, 1);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel12.TabIndex = 11;
+            this.metroLabel12.Text = "12";
+            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel11.Location = new System.Drawing.Point(514, 1);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel11.TabIndex = 10;
+            this.metroLabel11.Text = "11";
+            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel10.Location = new System.Drawing.Point(463, 1);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel10.TabIndex = 9;
+            this.metroLabel10.Text = "10";
+            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel9.Location = new System.Drawing.Point(412, 1);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel9.TabIndex = 8;
+            this.metroLabel9.Text = "9";
+            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel8.Location = new System.Drawing.Point(361, 1);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel8.TabIndex = 7;
+            this.metroLabel8.Text = "8";
+            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel7.Location = new System.Drawing.Point(310, 1);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel7.TabIndex = 6;
+            this.metroLabel7.Text = "7";
+            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(259, 1);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel6.TabIndex = 5;
+            this.metroLabel6.Text = "6";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(208, 1);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel5.TabIndex = 4;
+            this.metroLabel5.Text = "5";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(157, 1);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel4.TabIndex = 3;
+            this.metroLabel4.Text = "4";
+            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(106, 1);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel3.TabIndex = 2;
+            this.metroLabel3.Text = "3";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(55, 1);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel2.TabIndex = 1;
+            this.metroLabel2.Text = "2";
+            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(4, 1);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "1";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // metroButton1
             // 
@@ -241,316 +551,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optionen";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(4, 1);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "1";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(55, 1);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "2";
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(106, 1);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "3";
-            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(157, 1);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel4.TabIndex = 3;
-            this.metroLabel4.Text = "4";
-            this.metroLabel4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(208, 1);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel5.TabIndex = 4;
-            this.metroLabel5.Text = "5";
-            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(259, 1);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel6.TabIndex = 5;
-            this.metroLabel6.Text = "6";
-            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(310, 1);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel7.TabIndex = 6;
-            this.metroLabel7.Text = "7";
-            this.metroLabel7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel8.Location = new System.Drawing.Point(361, 1);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel8.TabIndex = 7;
-            this.metroLabel8.Text = "8";
-            this.metroLabel8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel9.Location = new System.Drawing.Point(412, 1);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel9.TabIndex = 8;
-            this.metroLabel9.Text = "9";
-            this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel10.Location = new System.Drawing.Point(463, 1);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel10.TabIndex = 9;
-            this.metroLabel10.Text = "10";
-            this.metroLabel10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel11.Location = new System.Drawing.Point(514, 1);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel11.TabIndex = 10;
-            this.metroLabel11.Text = "11";
-            this.metroLabel11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel12.Location = new System.Drawing.Point(565, 1);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel12.TabIndex = 11;
-            this.metroLabel12.Text = "12";
-            this.metroLabel12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel13.Location = new System.Drawing.Point(616, 1);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel13.TabIndex = 12;
-            this.metroLabel13.Text = "13";
-            this.metroLabel13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel14.Location = new System.Drawing.Point(667, 1);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel14.TabIndex = 13;
-            this.metroLabel14.Text = "14";
-            this.metroLabel14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel15.Location = new System.Drawing.Point(718, 1);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel15.TabIndex = 14;
-            this.metroLabel15.Text = "15";
-            this.metroLabel15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel16.Location = new System.Drawing.Point(769, 1);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel16.TabIndex = 15;
-            this.metroLabel16.Text = "16";
-            this.metroLabel16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel17
-            // 
-            this.metroLabel17.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel17.Location = new System.Drawing.Point(820, 1);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel17.TabIndex = 16;
-            this.metroLabel17.Text = "17";
-            this.metroLabel17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel18.Location = new System.Drawing.Point(871, 1);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel18.TabIndex = 17;
-            this.metroLabel18.Text = "18";
-            this.metroLabel18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel19
-            // 
-            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel19.Location = new System.Drawing.Point(922, 1);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel19.TabIndex = 18;
-            this.metroLabel19.Text = "19";
-            this.metroLabel19.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel20.Location = new System.Drawing.Point(973, 1);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel20.TabIndex = 19;
-            this.metroLabel20.Text = "20";
-            this.metroLabel20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel21
-            // 
-            this.metroLabel21.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel21.Location = new System.Drawing.Point(1024, 1);
-            this.metroLabel21.Name = "metroLabel21";
-            this.metroLabel21.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel21.TabIndex = 20;
-            this.metroLabel21.Text = "21";
-            this.metroLabel21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel22
-            // 
-            this.metroLabel22.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel22.Location = new System.Drawing.Point(1075, 1);
-            this.metroLabel22.Name = "metroLabel22";
-            this.metroLabel22.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel22.TabIndex = 21;
-            this.metroLabel22.Text = "22";
-            this.metroLabel22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel23
-            // 
-            this.metroLabel23.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel23.Location = new System.Drawing.Point(1126, 1);
-            this.metroLabel23.Name = "metroLabel23";
-            this.metroLabel23.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel23.TabIndex = 22;
-            this.metroLabel23.Text = "23";
-            this.metroLabel23.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel24
-            // 
-            this.metroLabel24.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel24.Location = new System.Drawing.Point(1177, 1);
-            this.metroLabel24.Name = "metroLabel24";
-            this.metroLabel24.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel24.TabIndex = 23;
-            this.metroLabel24.Text = "24";
-            this.metroLabel24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel25
-            // 
-            this.metroLabel25.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel25.Location = new System.Drawing.Point(1228, 1);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel25.TabIndex = 24;
-            this.metroLabel25.Text = "25";
-            this.metroLabel25.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel26
-            // 
-            this.metroLabel26.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel26.Location = new System.Drawing.Point(1279, 1);
-            this.metroLabel26.Name = "metroLabel26";
-            this.metroLabel26.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel26.TabIndex = 25;
-            this.metroLabel26.Text = "26";
-            this.metroLabel26.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel27
-            // 
-            this.metroLabel27.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel27.Location = new System.Drawing.Point(1330, 1);
-            this.metroLabel27.Name = "metroLabel27";
-            this.metroLabel27.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel27.TabIndex = 26;
-            this.metroLabel27.Text = "27";
-            this.metroLabel27.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel28
-            // 
-            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel28.Location = new System.Drawing.Point(1381, 1);
-            this.metroLabel28.Name = "metroLabel28";
-            this.metroLabel28.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel28.TabIndex = 27;
-            this.metroLabel28.Text = "28";
-            this.metroLabel28.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel29
-            // 
-            this.metroLabel29.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel29.Location = new System.Drawing.Point(1432, 1);
-            this.metroLabel29.Name = "metroLabel29";
-            this.metroLabel29.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel29.TabIndex = 28;
-            this.metroLabel29.Text = "29";
-            this.metroLabel29.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel30
-            // 
-            this.metroLabel30.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel30.Location = new System.Drawing.Point(1483, 1);
-            this.metroLabel30.Name = "metroLabel30";
-            this.metroLabel30.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel30.TabIndex = 29;
-            this.metroLabel30.Text = "30";
-            this.metroLabel30.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // metroLabel31
-            // 
-            this.metroLabel31.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel31.Location = new System.Drawing.Point(1534, 1);
-            this.metroLabel31.Name = "metroLabel31";
-            this.metroLabel31.Size = new System.Drawing.Size(44, 19);
-            this.metroLabel31.TabIndex = 30;
-            this.metroLabel31.Text = "31";
-            this.metroLabel31.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // customEmployeeControl1
             // 
             this.customEmployeeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -608,6 +608,7 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.customMonthCalender1);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
