@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkScheduler", "WorkSchedu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMonthCalendar", "CustomMonthCalendar\CustomMonthCalendar.csproj", "{4C4939AC-FB8E-4E02-9805-4A6344BF8F39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomEmployeeControl", "CustomEmployeeControl\CustomEmployeeControl.csproj", "{1FDAF732-65A8-459E-9CCA-0C0D9A7A4A2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4C4939AC-FB8E-4E02-9805-4A6344BF8F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C4939AC-FB8E-4E02-9805-4A6344BF8F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C4939AC-FB8E-4E02-9805-4A6344BF8F39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FDAF732-65A8-459E-9CCA-0C0D9A7A4A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDAF732-65A8-459E-9CCA-0C0D9A7A4A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDAF732-65A8-459E-9CCA-0C0D9A7A4A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDAF732-65A8-459E-9CCA-0C0D9A7A4A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
