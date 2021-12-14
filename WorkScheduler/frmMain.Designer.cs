@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnNewEmployee = new MetroFramework.Controls.MetroButton();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.btnPrint = new MetroFramework.Controls.MetroButton();
             this.btnFrühschicht = new MetroFramework.Controls.MetroButton();
             this.btnSpätschicht = new MetroFramework.Controls.MetroButton();
             this.btnSonderschicht = new MetroFramework.Controls.MetroButton();
@@ -81,24 +80,15 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroButton1
+            // btnNewEmployee
             // 
-            this.metroButton1.BackColor = System.Drawing.Color.White;
-            this.metroButton1.Location = new System.Drawing.Point(10, 584);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(138, 41);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "&Speichern";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(410, 584);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(138, 41);
-            this.metroButton2.TabIndex = 8;
-            this.metroButton2.Text = "&Abbruch";
-            this.metroButton2.UseSelectable = true;
+            this.btnNewEmployee.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnNewEmployee.Location = new System.Drawing.Point(215, 584);
+            this.btnNewEmployee.Name = "btnNewEmployee";
+            this.btnNewEmployee.Size = new System.Drawing.Size(138, 41);
+            this.btnNewEmployee.TabIndex = 8;
+            this.btnNewEmployee.Text = "+ Mitarbeiter";
+            this.btnNewEmployee.UseSelectable = true;
             // 
             // metroRadioButton1
             // 
@@ -162,14 +152,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Optionen";
             // 
-            // metroButton3
+            // btnPrint
             // 
-            this.metroButton3.Location = new System.Drawing.Point(154, 584);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(138, 41);
-            this.metroButton3.TabIndex = 19;
-            this.metroButton3.Text = "&Drucken";
-            this.metroButton3.UseSelectable = true;
+            this.btnPrint.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnPrint.Location = new System.Drawing.Point(21, 584);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(138, 41);
+            this.btnPrint.TabIndex = 19;
+            this.btnPrint.Text = "&Drucken";
+            this.btnPrint.UseSelectable = true;
             // 
             // btnFrühschicht
             // 
@@ -230,7 +221,7 @@
             this.btnNoShift.Name = "btnNoShift";
             this.btnNoShift.Size = new System.Drawing.Size(70, 28);
             this.btnNoShift.TabIndex = 25;
-            this.btnNoShift.Text = "Frei";
+            this.btnNoShift.Text = "Frei | -";
             this.btnNoShift.UseCustomBackColor = true;
             this.btnNoShift.UseCustomForeColor = true;
             this.btnNoShift.UseSelectable = true;
@@ -333,7 +324,7 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(111, 187);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(111, 188);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -663,12 +654,11 @@
             this.Controls.Add(this.btnSonderschicht);
             this.Controls.Add(this.btnSpätschicht);
             this.Controls.Add(this.btnFrühschicht);
-            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroCheckBox2);
             this.Controls.Add(this.metroCheckBox1);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnNewEmployee);
             this.Controls.Add(this.customMonthCalender1);
             this.MaximizeBox = false;
             this.Name = "frmMain";
@@ -686,15 +676,14 @@
         #endregion
 
         private CustomMonthCalendar.CustomMonthCalender customMonthCalender1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnNewEmployee;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton btnPrint;
         private MetroFramework.Controls.MetroButton btnFrühschicht;
         private MetroFramework.Controls.MetroButton btnSpätschicht;
         private MetroFramework.Controls.MetroButton btnSonderschicht;

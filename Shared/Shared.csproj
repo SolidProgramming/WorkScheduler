@@ -45,10 +45,9 @@
     <Compile Include="Classes\Shift.cs" />
     <Compile Include="Classes\ShiftHelper.cs" />
     <Compile Include="Enums\ShiftType.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
