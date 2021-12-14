@@ -75,7 +75,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1920, 30);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1684, 30);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // metroLabel1
@@ -95,7 +95,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CustomEmployeeControl";
-            this.Size = new System.Drawing.Size(1920, 30);
+            this.Size = new System.Drawing.Size(1685, 30);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
