@@ -75,5 +75,11 @@ namespace WorkScheduler
             Shift.Color = btnNoShift.BackColor;
             ShiftHelper.SetShift(Shift);
         }
+
+        private void btnNewEmployee_Click(object sender, EventArgs e)
+        {
+            frmEmployee frmEmployee = new frmEmployee();
+            frmEmployee.ShowDialog();
+        }
     }
 }

@@ -365,6 +365,8 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEmployee";
             this.Resizable = false;
             this.ShowIcon = false;

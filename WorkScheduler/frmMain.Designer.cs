@@ -76,7 +76,9 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
             this.groupBox1.SuspendLayout();
+            this.pnlEmployees.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +91,7 @@
             this.btnNewEmployee.TabIndex = 8;
             this.btnNewEmployee.Text = "+ Mitarbeiter";
             this.btnNewEmployee.UseSelectable = true;
+            this.btnNewEmployee.Click += new System.EventHandler(this.btnNewEmployee_Click);
             // 
             // metroRadioButton1
             // 
@@ -252,6 +255,7 @@
             // pnlEmployees
             // 
             this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Controls.Add(this.customEmployeeControl1);
             this.pnlEmployees.Location = new System.Drawing.Point(3, 209);
             this.pnlEmployees.Name = "pnlEmployees";
             this.pnlEmployees.Size = new System.Drawing.Size(1730, 351);
@@ -641,6 +645,14 @@
             this.metroLabel1.Text = "1";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // customEmployeeControl1
+            // 
+            this.customEmployeeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customEmployeeControl1.Location = new System.Drawing.Point(6, -1);
+            this.customEmployeeControl1.Name = "customEmployeeControl1";
+            this.customEmployeeControl1.Size = new System.Drawing.Size(1695, 33);
+            this.customEmployeeControl1.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -667,6 +679,7 @@
             this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.pnlEmployees.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -723,6 +736,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private CustomEmployeeControl.CustomEmployeeControl customEmployeeControl1;
     }
 }
 
