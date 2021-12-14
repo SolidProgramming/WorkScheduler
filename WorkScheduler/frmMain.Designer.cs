@@ -28,6 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
+            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
+            this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.btnFrühschicht = new MetroFramework.Controls.MetroButton();
+            this.btnSpätschicht = new MetroFramework.Controls.MetroButton();
+            this.btnSonderschicht = new MetroFramework.Controls.MetroButton();
+            this.btnNachschicht = new MetroFramework.Controls.MetroButton();
+            this.btnNoShift = new MetroFramework.Controls.MetroButton();
+            this.btnVacation = new MetroFramework.Controls.MetroButton();
+            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
+            this.pnlEmployees = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
@@ -60,26 +77,194 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
-            this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.btnFrühschicht = new MetroFramework.Controls.MetroButton();
-            this.btnSpätschicht = new MetroFramework.Controls.MetroButton();
-            this.btnSonderschicht = new MetroFramework.Controls.MetroButton();
-            this.btnNachschicht = new MetroFramework.Controls.MetroButton();
-            this.btnNoShift = new MetroFramework.Controls.MetroButton();
-            this.btnVacation = new MetroFramework.Controls.MetroButton();
-            this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
-            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
-            this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.BackColor = System.Drawing.Color.White;
+            this.metroButton1.Location = new System.Drawing.Point(10, 584);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(138, 41);
+            this.metroButton1.TabIndex = 7;
+            this.metroButton1.Text = "&Speichern";
+            this.metroButton1.UseSelectable = true;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(410, 584);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(138, 41);
+            this.metroButton2.TabIndex = 8;
+            this.metroButton2.Text = "&Abbruch";
+            this.metroButton2.UseSelectable = true;
+            // 
+            // metroRadioButton1
+            // 
+            this.metroRadioButton1.AutoSize = true;
+            this.metroRadioButton1.Location = new System.Drawing.Point(19, 48);
+            this.metroRadioButton1.Name = "metroRadioButton1";
+            this.metroRadioButton1.Size = new System.Drawing.Size(66, 15);
+            this.metroRadioButton1.TabIndex = 9;
+            this.metroRadioButton1.Text = "Option2";
+            this.metroRadioButton1.UseSelectable = true;
+            // 
+            // metroRadioButton2
+            // 
+            this.metroRadioButton2.AutoSize = true;
+            this.metroRadioButton2.Location = new System.Drawing.Point(19, 27);
+            this.metroRadioButton2.Name = "metroRadioButton2";
+            this.metroRadioButton2.Size = new System.Drawing.Size(66, 15);
+            this.metroRadioButton2.TabIndex = 9;
+            this.metroRadioButton2.Text = "Option1";
+            this.metroRadioButton2.UseSelectable = true;
+            // 
+            // metroRadioButton3
+            // 
+            this.metroRadioButton3.AutoSize = true;
+            this.metroRadioButton3.Location = new System.Drawing.Point(19, 69);
+            this.metroRadioButton3.Name = "metroRadioButton3";
+            this.metroRadioButton3.Size = new System.Drawing.Size(66, 15);
+            this.metroRadioButton3.TabIndex = 10;
+            this.metroRadioButton3.Text = "Option3";
+            this.metroRadioButton3.UseSelectable = true;
+            // 
+            // metroCheckBox1
+            // 
+            this.metroCheckBox1.AutoSize = true;
+            this.metroCheckBox1.Location = new System.Drawing.Point(517, 36);
+            this.metroCheckBox1.Name = "metroCheckBox1";
+            this.metroCheckBox1.Size = new System.Drawing.Size(90, 15);
+            this.metroCheckBox1.TabIndex = 11;
+            this.metroCheckBox1.Text = "Eigenschaft1";
+            this.metroCheckBox1.UseSelectable = true;
+            // 
+            // metroCheckBox2
+            // 
+            this.metroCheckBox2.AutoSize = true;
+            this.metroCheckBox2.Location = new System.Drawing.Point(517, 57);
+            this.metroCheckBox2.Name = "metroCheckBox2";
+            this.metroCheckBox2.Size = new System.Drawing.Size(90, 15);
+            this.metroCheckBox2.TabIndex = 12;
+            this.metroCheckBox2.Text = "Eigenschaft2";
+            this.metroCheckBox2.UseSelectable = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.metroRadioButton3);
+            this.groupBox1.Controls.Add(this.metroRadioButton1);
+            this.groupBox1.Controls.Add(this.metroRadioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(249, 30);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(104, 102);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Optionen";
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(154, 584);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(138, 41);
+            this.metroButton3.TabIndex = 19;
+            this.metroButton3.Text = "&Drucken";
+            this.metroButton3.UseSelectable = true;
+            // 
+            // btnFrühschicht
+            // 
+            this.btnFrühschicht.BackColor = System.Drawing.Color.Gold;
+            this.btnFrühschicht.Location = new System.Drawing.Point(359, 36);
+            this.btnFrühschicht.Name = "btnFrühschicht";
+            this.btnFrühschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnFrühschicht.TabIndex = 21;
+            this.btnFrühschicht.Text = "Früh | F";
+            this.btnFrühschicht.UseCustomBackColor = true;
+            this.btnFrühschicht.UseCustomForeColor = true;
+            this.btnFrühschicht.UseSelectable = true;
+            this.btnFrühschicht.Click += new System.EventHandler(this.btnFrühschicht_Click);
+            // 
+            // btnSpätschicht
+            // 
+            this.btnSpätschicht.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSpätschicht.Location = new System.Drawing.Point(359, 68);
+            this.btnSpätschicht.Name = "btnSpätschicht";
+            this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnSpätschicht.TabIndex = 22;
+            this.btnSpätschicht.Text = "Spät | S";
+            this.btnSpätschicht.UseCustomBackColor = true;
+            this.btnSpätschicht.UseCustomForeColor = true;
+            this.btnSpätschicht.UseSelectable = true;
+            this.btnSpätschicht.Click += new System.EventHandler(this.btnSpätschicht_Click);
+            // 
+            // btnSonderschicht
+            // 
+            this.btnSonderschicht.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnSonderschicht.Location = new System.Drawing.Point(435, 36);
+            this.btnSonderschicht.Name = "btnSonderschicht";
+            this.btnSonderschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnSonderschicht.TabIndex = 23;
+            this.btnSonderschicht.Text = "Sonder | SO";
+            this.btnSonderschicht.UseCustomBackColor = true;
+            this.btnSonderschicht.UseCustomForeColor = true;
+            this.btnSonderschicht.UseSelectable = true;
+            this.btnSonderschicht.Click += new System.EventHandler(this.btnSonderschicht_Click);
+            // 
+            // btnNachschicht
+            // 
+            this.btnNachschicht.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNachschicht.Location = new System.Drawing.Point(359, 102);
+            this.btnNachschicht.Name = "btnNachschicht";
+            this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnNachschicht.TabIndex = 24;
+            this.btnNachschicht.Text = "Nacht | N";
+            this.btnNachschicht.UseCustomBackColor = true;
+            this.btnNachschicht.UseCustomForeColor = true;
+            this.btnNachschicht.UseSelectable = true;
+            this.btnNachschicht.Click += new System.EventHandler(this.btnNachschicht_Click);
+            // 
+            // btnNoShift
+            // 
+            this.btnNoShift.BackColor = System.Drawing.SystemColors.Window;
+            this.btnNoShift.Location = new System.Drawing.Point(435, 102);
+            this.btnNoShift.Name = "btnNoShift";
+            this.btnNoShift.Size = new System.Drawing.Size(70, 28);
+            this.btnNoShift.TabIndex = 25;
+            this.btnNoShift.Text = "Frei";
+            this.btnNoShift.UseCustomBackColor = true;
+            this.btnNoShift.UseCustomForeColor = true;
+            this.btnNoShift.UseSelectable = true;
+            this.btnNoShift.Click += new System.EventHandler(this.btnNoShift_Click);
+            // 
+            // btnVacation
+            // 
+            this.btnVacation.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnVacation.Location = new System.Drawing.Point(435, 68);
+            this.btnVacation.Name = "btnVacation";
+            this.btnVacation.Size = new System.Drawing.Size(70, 28);
+            this.btnVacation.TabIndex = 26;
+            this.btnVacation.Text = "Urlaub | U";
+            this.btnVacation.UseCustomBackColor = true;
+            this.btnVacation.UseCustomForeColor = true;
+            this.btnVacation.UseSelectable = true;
+            this.btnVacation.Click += new System.EventHandler(this.btnVacation_Click);
+            // 
+            // customMonthCalender1
+            // 
+            this.customMonthCalender1.AutoselectMonth = true;
+            this.customMonthCalender1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customMonthCalender1.Location = new System.Drawing.Point(-1, 2);
+            this.customMonthCalender1.Name = "customMonthCalender1";
+            this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
+            this.customMonthCalender1.TabIndex = 0;
+            // 
+            // pnlEmployees
+            // 
+            this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEmployees.Location = new System.Drawing.Point(3, 209);
+            this.pnlEmployees.Name = "pnlEmployees";
+            this.pnlEmployees.Size = new System.Drawing.Size(1730, 351);
+            this.pnlEmployees.TabIndex = 27;
             // 
             // tableLayoutPanel1
             // 
@@ -116,7 +301,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -148,12 +333,12 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(100, 195);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(111, 187);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1585, 22);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 21;
             // 
             // metroLabel31
             // 
@@ -465,219 +650,34 @@
             this.metroLabel1.Text = "1";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // metroButton1
-            // 
-            this.metroButton1.BackColor = System.Drawing.Color.White;
-            this.metroButton1.Location = new System.Drawing.Point(10, 584);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(138, 41);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "&Speichern";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(410, 584);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(138, 41);
-            this.metroButton2.TabIndex = 8;
-            this.metroButton2.Text = "&Abbruch";
-            this.metroButton2.UseSelectable = true;
-            // 
-            // metroRadioButton1
-            // 
-            this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(19, 48);
-            this.metroRadioButton1.Name = "metroRadioButton1";
-            this.metroRadioButton1.Size = new System.Drawing.Size(66, 15);
-            this.metroRadioButton1.TabIndex = 9;
-            this.metroRadioButton1.Text = "Option2";
-            this.metroRadioButton1.UseSelectable = true;
-            // 
-            // metroRadioButton2
-            // 
-            this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(19, 27);
-            this.metroRadioButton2.Name = "metroRadioButton2";
-            this.metroRadioButton2.Size = new System.Drawing.Size(66, 15);
-            this.metroRadioButton2.TabIndex = 9;
-            this.metroRadioButton2.Text = "Option1";
-            this.metroRadioButton2.UseSelectable = true;
-            // 
-            // metroRadioButton3
-            // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(19, 69);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(66, 15);
-            this.metroRadioButton3.TabIndex = 10;
-            this.metroRadioButton3.Text = "Option3";
-            this.metroRadioButton3.UseSelectable = true;
-            // 
-            // metroCheckBox1
-            // 
-            this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(517, 36);
-            this.metroCheckBox1.Name = "metroCheckBox1";
-            this.metroCheckBox1.Size = new System.Drawing.Size(90, 15);
-            this.metroCheckBox1.TabIndex = 11;
-            this.metroCheckBox1.Text = "Eigenschaft1";
-            this.metroCheckBox1.UseSelectable = true;
-            // 
-            // metroCheckBox2
-            // 
-            this.metroCheckBox2.AutoSize = true;
-            this.metroCheckBox2.Location = new System.Drawing.Point(517, 57);
-            this.metroCheckBox2.Name = "metroCheckBox2";
-            this.metroCheckBox2.Size = new System.Drawing.Size(90, 15);
-            this.metroCheckBox2.TabIndex = 12;
-            this.metroCheckBox2.Text = "Eigenschaft2";
-            this.metroCheckBox2.UseSelectable = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.metroRadioButton3);
-            this.groupBox1.Controls.Add(this.metroRadioButton1);
-            this.groupBox1.Controls.Add(this.metroRadioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(249, 30);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(104, 102);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Optionen";
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(154, 584);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(138, 41);
-            this.metroButton3.TabIndex = 19;
-            this.metroButton3.Text = "&Drucken";
-            this.metroButton3.UseSelectable = true;
-            // 
-            // btnFrühschicht
-            // 
-            this.btnFrühschicht.BackColor = System.Drawing.Color.Gold;
-            this.btnFrühschicht.Location = new System.Drawing.Point(359, 36);
-            this.btnFrühschicht.Name = "btnFrühschicht";
-            this.btnFrühschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnFrühschicht.TabIndex = 21;
-            this.btnFrühschicht.Text = "Früh | F";
-            this.btnFrühschicht.UseCustomBackColor = true;
-            this.btnFrühschicht.UseCustomForeColor = true;
-            this.btnFrühschicht.UseSelectable = true;
-            this.btnFrühschicht.Click += new System.EventHandler(this.btnFrühschicht_Click);
-            // 
-            // btnSpätschicht
-            // 
-            this.btnSpätschicht.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnSpätschicht.Location = new System.Drawing.Point(359, 68);
-            this.btnSpätschicht.Name = "btnSpätschicht";
-            this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnSpätschicht.TabIndex = 22;
-            this.btnSpätschicht.Text = "Spät | S";
-            this.btnSpätschicht.UseCustomBackColor = true;
-            this.btnSpätschicht.UseCustomForeColor = true;
-            this.btnSpätschicht.UseSelectable = true;
-            this.btnSpätschicht.Click += new System.EventHandler(this.btnSpätschicht_Click);
-            // 
-            // btnSonderschicht
-            // 
-            this.btnSonderschicht.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnSonderschicht.Location = new System.Drawing.Point(435, 36);
-            this.btnSonderschicht.Name = "btnSonderschicht";
-            this.btnSonderschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnSonderschicht.TabIndex = 23;
-            this.btnSonderschicht.Text = "Sonder | SO";
-            this.btnSonderschicht.UseCustomBackColor = true;
-            this.btnSonderschicht.UseCustomForeColor = true;
-            this.btnSonderschicht.UseSelectable = true;
-            this.btnSonderschicht.Click += new System.EventHandler(this.btnSonderschicht_Click);
-            // 
-            // btnNachschicht
-            // 
-            this.btnNachschicht.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNachschicht.Location = new System.Drawing.Point(359, 102);
-            this.btnNachschicht.Name = "btnNachschicht";
-            this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnNachschicht.TabIndex = 24;
-            this.btnNachschicht.Text = "Nacht | N";
-            this.btnNachschicht.UseCustomBackColor = true;
-            this.btnNachschicht.UseCustomForeColor = true;
-            this.btnNachschicht.UseSelectable = true;
-            this.btnNachschicht.Click += new System.EventHandler(this.btnNachschicht_Click);
-            // 
-            // btnNoShift
-            // 
-            this.btnNoShift.BackColor = System.Drawing.SystemColors.Window;
-            this.btnNoShift.Location = new System.Drawing.Point(435, 102);
-            this.btnNoShift.Name = "btnNoShift";
-            this.btnNoShift.Size = new System.Drawing.Size(70, 28);
-            this.btnNoShift.TabIndex = 25;
-            this.btnNoShift.Text = "Frei";
-            this.btnNoShift.UseCustomBackColor = true;
-            this.btnNoShift.UseCustomForeColor = true;
-            this.btnNoShift.UseSelectable = true;
-            this.btnNoShift.Click += new System.EventHandler(this.btnNoShift_Click);
-            // 
-            // btnVacation
-            // 
-            this.btnVacation.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnVacation.Location = new System.Drawing.Point(435, 68);
-            this.btnVacation.Name = "btnVacation";
-            this.btnVacation.Size = new System.Drawing.Size(70, 28);
-            this.btnVacation.TabIndex = 26;
-            this.btnVacation.Text = "Urlaub | U";
-            this.btnVacation.UseCustomBackColor = true;
-            this.btnVacation.UseCustomForeColor = true;
-            this.btnVacation.UseSelectable = true;
-            this.btnVacation.Click += new System.EventHandler(this.btnVacation_Click);
-            // 
-            // customEmployeeControl1
-            // 
-            this.customEmployeeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customEmployeeControl1.Location = new System.Drawing.Point(-1, 216);
-            this.customEmployeeControl1.Name = "customEmployeeControl1";
-            this.customEmployeeControl1.Size = new System.Drawing.Size(1685, 30);
-            this.customEmployeeControl1.TabIndex = 20;
-            // 
-            // customMonthCalender1
-            // 
-            this.customMonthCalender1.AutoselectMonth = true;
-            this.customMonthCalender1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customMonthCalender1.Location = new System.Drawing.Point(-1, 2);
-            this.customMonthCalender1.Name = "customMonthCalender1";
-            this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
-            this.customMonthCalender1.TabIndex = 0;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1772, 635);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pnlEmployees);
             this.Controls.Add(this.btnVacation);
             this.Controls.Add(this.btnNoShift);
             this.Controls.Add(this.btnNachschicht);
             this.Controls.Add(this.btnSonderschicht);
             this.Controls.Add(this.btnSpätschicht);
             this.Controls.Add(this.btnFrühschicht);
-            this.Controls.Add(this.customEmployeeControl1);
             this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroCheckBox2);
             this.Controls.Add(this.metroCheckBox1);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.customMonthCalender1);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Shown += new System.EventHandler(this.frmMain_Shown);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,7 +686,6 @@
         #endregion
 
         private CustomMonthCalendar.CustomMonthCalender customMonthCalender1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
@@ -695,6 +694,16 @@
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
         private MetroFramework.Controls.MetroCheckBox metroCheckBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton btnFrühschicht;
+        private MetroFramework.Controls.MetroButton btnSpätschicht;
+        private MetroFramework.Controls.MetroButton btnSonderschicht;
+        private MetroFramework.Controls.MetroButton btnNachschicht;
+        private MetroFramework.Controls.MetroButton btnNoShift;
+        private MetroFramework.Controls.MetroButton btnVacation;
+        private System.Windows.Forms.Panel pnlEmployees;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroLabel metroLabel31;
         private MetroFramework.Controls.MetroLabel metroLabel30;
         private MetroFramework.Controls.MetroLabel metroLabel29;
         private MetroFramework.Controls.MetroLabel metroLabel28;
@@ -725,15 +734,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel31;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private CustomEmployeeControl.CustomEmployeeControl customEmployeeControl1;
-        private MetroFramework.Controls.MetroButton btnFrühschicht;
-        private MetroFramework.Controls.MetroButton btnSpätschicht;
-        private MetroFramework.Controls.MetroButton btnSonderschicht;
-        private MetroFramework.Controls.MetroButton btnNachschicht;
-        private MetroFramework.Controls.MetroButton btnNoShift;
-        private MetroFramework.Controls.MetroButton btnVacation;
     }
 }
 

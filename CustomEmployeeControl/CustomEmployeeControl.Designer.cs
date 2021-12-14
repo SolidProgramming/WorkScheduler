@@ -95,7 +95,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "CustomEmployeeControl";
-            this.Size = new System.Drawing.Size(1685, 30);
+            this.Size = new System.Drawing.Size(1680, 30);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -19,6 +19,12 @@ namespace WorkScheduler
         public frmMain()
         {
             InitializeComponent();
+
+            pnlEmployees.AutoScroll = false;
+            pnlEmployees.HorizontalScroll.Enabled = false;
+            pnlEmployees.HorizontalScroll.Visible = false;
+            pnlEmployees.HorizontalScroll.Maximum = 0;
+            pnlEmployees.AutoScroll = true;
         }
 
         private Shift Shift = new Shift();

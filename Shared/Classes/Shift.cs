@@ -10,7 +10,7 @@ namespace Shared.Classes
 {
     public class Shift
     {
-        public ShiftType Type { get; set; }
+        public ShiftType Type { get; set; } = ShiftType.None;
         public Color Color { get; set; }
     }
 }
