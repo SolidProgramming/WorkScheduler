@@ -31,36 +31,42 @@ namespace WorkScheduler
         private void btnFrühschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Early;
+            Shift.Color = btnFrühschicht.BackColor;
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnSpätschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Late;
+            Shift.Color = btnSpätschicht.BackColor;
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnNachschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Night;
+            Shift.Color = btnNachschicht.BackColor;
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnSonderschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Special;
+            Shift.Color = btnSonderschicht.BackColor;
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnVacation_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Vacation;
+            Shift.Color = btnVacation.BackColor;
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnNoShift_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.None;
+            Shift.Color = btnNoShift.BackColor;
             ShiftHelper.SetShift(Shift);
         }
     }

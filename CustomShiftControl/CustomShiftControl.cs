@@ -17,7 +17,11 @@ namespace CustomShiftControl
         public CustomShiftControl()
         {
             InitializeComponent();
+
+            ShiftLabel.UseCustomBackColor = true;
+
         }
+
 
         private Shift Shift{ get; set; }
 
@@ -26,6 +30,7 @@ namespace CustomShiftControl
             Shift = shift;
 
             SetShiftText();
+            SetControlColor();
         }
 
         private void SetShiftText()
@@ -53,6 +58,11 @@ namespace CustomShiftControl
                 default:
                     break;
             }
+        }
+
+        private void SetControlColor()
+        {
+            ShiftLabel.BackColor = Shift.Color;
         }
 
         private void ShiftLabel_DoubleClick(object sender, EventArgs e)

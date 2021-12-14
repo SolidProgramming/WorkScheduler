@@ -69,14 +69,14 @@
             this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
-            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
             this.btnFrühschicht = new MetroFramework.Controls.MetroButton();
             this.btnSpätschicht = new MetroFramework.Controls.MetroButton();
             this.btnSonderschicht = new MetroFramework.Controls.MetroButton();
             this.btnNachschicht = new MetroFramework.Controls.MetroButton();
             this.btnNoShift = new MetroFramework.Controls.MetroButton();
             this.btnVacation = new MetroFramework.Controls.MetroButton();
+            this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
+            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +116,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -517,7 +517,7 @@
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(670, 47);
+            this.metroCheckBox1.Location = new System.Drawing.Point(517, 36);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(90, 15);
             this.metroCheckBox1.TabIndex = 11;
@@ -527,7 +527,7 @@
             // metroCheckBox2
             // 
             this.metroCheckBox2.AutoSize = true;
-            this.metroCheckBox2.Location = new System.Drawing.Point(670, 68);
+            this.metroCheckBox2.Location = new System.Drawing.Point(517, 57);
             this.metroCheckBox2.Name = "metroCheckBox2";
             this.metroCheckBox2.Size = new System.Drawing.Size(90, 15);
             this.metroCheckBox2.TabIndex = 12;
@@ -555,6 +555,84 @@
             this.metroButton3.Text = "&Drucken";
             this.metroButton3.UseSelectable = true;
             // 
+            // btnFrühschicht
+            // 
+            this.btnFrühschicht.BackColor = System.Drawing.Color.Gold;
+            this.btnFrühschicht.Location = new System.Drawing.Point(359, 36);
+            this.btnFrühschicht.Name = "btnFrühschicht";
+            this.btnFrühschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnFrühschicht.TabIndex = 21;
+            this.btnFrühschicht.Text = "Früh | F";
+            this.btnFrühschicht.UseCustomBackColor = true;
+            this.btnFrühschicht.UseCustomForeColor = true;
+            this.btnFrühschicht.UseSelectable = true;
+            this.btnFrühschicht.Click += new System.EventHandler(this.btnFrühschicht_Click);
+            // 
+            // btnSpätschicht
+            // 
+            this.btnSpätschicht.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSpätschicht.Location = new System.Drawing.Point(359, 68);
+            this.btnSpätschicht.Name = "btnSpätschicht";
+            this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnSpätschicht.TabIndex = 22;
+            this.btnSpätschicht.Text = "Spät | S";
+            this.btnSpätschicht.UseCustomBackColor = true;
+            this.btnSpätschicht.UseCustomForeColor = true;
+            this.btnSpätschicht.UseSelectable = true;
+            this.btnSpätschicht.Click += new System.EventHandler(this.btnSpätschicht_Click);
+            // 
+            // btnSonderschicht
+            // 
+            this.btnSonderschicht.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnSonderschicht.Location = new System.Drawing.Point(435, 36);
+            this.btnSonderschicht.Name = "btnSonderschicht";
+            this.btnSonderschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnSonderschicht.TabIndex = 23;
+            this.btnSonderschicht.Text = "Sonder | SO";
+            this.btnSonderschicht.UseCustomBackColor = true;
+            this.btnSonderschicht.UseCustomForeColor = true;
+            this.btnSonderschicht.UseSelectable = true;
+            this.btnSonderschicht.Click += new System.EventHandler(this.btnSonderschicht_Click);
+            // 
+            // btnNachschicht
+            // 
+            this.btnNachschicht.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNachschicht.Location = new System.Drawing.Point(359, 102);
+            this.btnNachschicht.Name = "btnNachschicht";
+            this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
+            this.btnNachschicht.TabIndex = 24;
+            this.btnNachschicht.Text = "Nacht | N";
+            this.btnNachschicht.UseCustomBackColor = true;
+            this.btnNachschicht.UseCustomForeColor = true;
+            this.btnNachschicht.UseSelectable = true;
+            this.btnNachschicht.Click += new System.EventHandler(this.btnNachschicht_Click);
+            // 
+            // btnNoShift
+            // 
+            this.btnNoShift.BackColor = System.Drawing.SystemColors.Window;
+            this.btnNoShift.Location = new System.Drawing.Point(435, 102);
+            this.btnNoShift.Name = "btnNoShift";
+            this.btnNoShift.Size = new System.Drawing.Size(70, 28);
+            this.btnNoShift.TabIndex = 25;
+            this.btnNoShift.Text = "Frei";
+            this.btnNoShift.UseCustomBackColor = true;
+            this.btnNoShift.UseCustomForeColor = true;
+            this.btnNoShift.UseSelectable = true;
+            this.btnNoShift.Click += new System.EventHandler(this.btnNoShift_Click);
+            // 
+            // btnVacation
+            // 
+            this.btnVacation.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnVacation.Location = new System.Drawing.Point(435, 68);
+            this.btnVacation.Name = "btnVacation";
+            this.btnVacation.Size = new System.Drawing.Size(70, 28);
+            this.btnVacation.TabIndex = 26;
+            this.btnVacation.Text = "Urlaub | U";
+            this.btnVacation.UseCustomBackColor = true;
+            this.btnVacation.UseCustomForeColor = true;
+            this.btnVacation.UseSelectable = true;
+            this.btnVacation.Click += new System.EventHandler(this.btnVacation_Click);
+            // 
             // customEmployeeControl1
             // 
             this.customEmployeeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -571,84 +649,6 @@
             this.customMonthCalender1.Name = "customMonthCalender1";
             this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
             this.customMonthCalender1.TabIndex = 0;
-            // 
-            // btnFrühschicht
-            // 
-            this.btnFrühschicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnFrühschicht.Location = new System.Drawing.Point(359, 36);
-            this.btnFrühschicht.Name = "btnFrühschicht";
-            this.btnFrühschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnFrühschicht.TabIndex = 21;
-            this.btnFrühschicht.Text = "Früh | F";
-            this.btnFrühschicht.UseCustomBackColor = true;
-            this.btnFrühschicht.UseCustomForeColor = true;
-            this.btnFrühschicht.UseSelectable = true;
-            this.btnFrühschicht.Click += new System.EventHandler(this.btnFrühschicht_Click);
-            // 
-            // btnSpätschicht
-            // 
-            this.btnSpätschicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSpätschicht.Location = new System.Drawing.Point(359, 68);
-            this.btnSpätschicht.Name = "btnSpätschicht";
-            this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnSpätschicht.TabIndex = 22;
-            this.btnSpätschicht.Text = "Spät | S";
-            this.btnSpätschicht.UseCustomBackColor = true;
-            this.btnSpätschicht.UseCustomForeColor = true;
-            this.btnSpätschicht.UseSelectable = true;
-            this.btnSpätschicht.Click += new System.EventHandler(this.btnSpätschicht_Click);
-            // 
-            // btnSonderschicht
-            // 
-            this.btnSonderschicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSonderschicht.Location = new System.Drawing.Point(435, 36);
-            this.btnSonderschicht.Name = "btnSonderschicht";
-            this.btnSonderschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnSonderschicht.TabIndex = 23;
-            this.btnSonderschicht.Text = "Sonder | SO";
-            this.btnSonderschicht.UseCustomBackColor = true;
-            this.btnSonderschicht.UseCustomForeColor = true;
-            this.btnSonderschicht.UseSelectable = true;
-            this.btnSonderschicht.Click += new System.EventHandler(this.btnSonderschicht_Click);
-            // 
-            // btnNachschicht
-            // 
-            this.btnNachschicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNachschicht.Location = new System.Drawing.Point(359, 102);
-            this.btnNachschicht.Name = "btnNachschicht";
-            this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
-            this.btnNachschicht.TabIndex = 24;
-            this.btnNachschicht.Text = "Nacht | N";
-            this.btnNachschicht.UseCustomBackColor = true;
-            this.btnNachschicht.UseCustomForeColor = true;
-            this.btnNachschicht.UseSelectable = true;
-            this.btnNachschicht.Click += new System.EventHandler(this.btnNachschicht_Click);
-            // 
-            // btnNoShift
-            // 
-            this.btnNoShift.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnNoShift.Location = new System.Drawing.Point(435, 102);
-            this.btnNoShift.Name = "btnNoShift";
-            this.btnNoShift.Size = new System.Drawing.Size(70, 28);
-            this.btnNoShift.TabIndex = 25;
-            this.btnNoShift.Text = "Frei";
-            this.btnNoShift.UseCustomBackColor = true;
-            this.btnNoShift.UseCustomForeColor = true;
-            this.btnNoShift.UseSelectable = true;
-            this.btnNoShift.Click += new System.EventHandler(this.btnNoShift_Click);
-            // 
-            // btnVacation
-            // 
-            this.btnVacation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnVacation.Location = new System.Drawing.Point(435, 68);
-            this.btnVacation.Name = "btnVacation";
-            this.btnVacation.Size = new System.Drawing.Size(70, 28);
-            this.btnVacation.TabIndex = 26;
-            this.btnVacation.Text = "Urlaub";
-            this.btnVacation.UseCustomBackColor = true;
-            this.btnVacation.UseCustomForeColor = true;
-            this.btnVacation.UseSelectable = true;
-            this.btnVacation.Click += new System.EventHandler(this.btnVacation_Click);
             // 
             // frmMain
             // 
