@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using Shared.Enums;
 using Shared.Classes;
-
+using WorkScheduler.Classes;
 
 namespace WorkScheduler
 {
