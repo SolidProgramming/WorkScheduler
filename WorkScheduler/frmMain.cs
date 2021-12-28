@@ -11,6 +11,7 @@ using MetroFramework.Forms;
 using Shared.Enums;
 using Shared.Classes;
 using WorkScheduler.Classes;
+using Shared.Models;
 
 namespace WorkScheduler
 {
