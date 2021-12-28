@@ -32,20 +32,7 @@ namespace WorkScheduler
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            SQLiteController.LoadEmployees();
-            SQLiteController.TryAddEmployee(new EmployeeModel()
-            {
-                FirstName = "firstname",
-                Surname = "surname",
-                Age = 5,
-                Birthdate = "2234213",
-                TelephoneNumber = "23434532",
-                MobileNumber = "3422",
-                Street = "street",
-                Region = "region",
-                HouseNumber = 5,
-                Active = true
-            });
+            SQLiteController.LoadEmployees();            
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
