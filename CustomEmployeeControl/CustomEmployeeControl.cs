@@ -25,7 +25,7 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
             {
-                Control control = new CustomShiftControl.CustomShiftControl(shift.Shifts);
+                Control control = new CustomShiftControl.CustomShiftControl(shift.Shifts, i - 1);
 
                 tableLayoutPanel1.Controls.Add(control, i, 0);
             }

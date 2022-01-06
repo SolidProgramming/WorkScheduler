@@ -11,18 +11,26 @@ using Shared.Classes;
 using Shared.Enums;
 using System.Reflection;
 using Shared.Models;
+using Shared.Classes;
 
 namespace CustomShiftControl
 {
     public partial class CustomShiftControl : UserControl
     {
-        public CustomShiftControl(List<ShiftModel> shift)
+        public CustomShiftControl(List<ShiftModel> shifts, int column)
         {
             InitializeComponent();
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
 
             ShiftLabel.UseCustomBackColor = true;
+
+            if (shifts.Count <= column)
+            {
+                return;
+            }
+
+            SetShift(shifts[column], column);
         }
 
 
@@ -35,6 +43,15 @@ namespace CustomShiftControl
             SetShiftText();
             SetControlColor();
         }
+
+        public void SetShift(ShiftModel shift, int column)
+        {
+            Shift = shift.ToShift();
+
+            SetShiftText();
+            SetControlColor();
+        }
+
 
         private void SetShiftText()
         {
@@ -72,5 +89,7 @@ namespace CustomShiftControl
         {
             SetShift(ShiftHelper.GetShift());
         }
+
+        
     }
 }

@@ -181,7 +181,7 @@
             // 
             // btnSpätschicht
             // 
-            this.btnSpätschicht.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSpätschicht.BackColor = System.Drawing.Color.SlateGray;
             this.btnSpätschicht.Location = new System.Drawing.Point(250, 63);
             this.btnSpätschicht.Name = "btnSpätschicht";
             this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
@@ -207,7 +207,7 @@
             // 
             // btnNachschicht
             // 
-            this.btnNachschicht.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNachschicht.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnNachschicht.Location = new System.Drawing.Point(250, 97);
             this.btnNachschicht.Name = "btnNachschicht";
             this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
@@ -220,7 +220,7 @@
             // 
             // btnNoShift
             // 
-            this.btnNoShift.BackColor = System.Drawing.SystemColors.Window;
+            this.btnNoShift.BackColor = System.Drawing.Color.White;
             this.btnNoShift.Location = new System.Drawing.Point(326, 97);
             this.btnNoShift.Name = "btnNoShift";
             this.btnNoShift.Size = new System.Drawing.Size(70, 28);
@@ -287,7 +287,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
