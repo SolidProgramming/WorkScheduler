@@ -36,16 +36,13 @@
             this.txtbArea = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.txtbStreet = new MetroFramework.Controls.MetroTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.txtbMobile = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtbTelephone = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.chbActive = new MetroFramework.Controls.MetroCheckBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.btnSave = new MetroFramework.Controls.MetroButton();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -204,37 +201,6 @@
             this.txtbStreet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtbStreet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(406, 108);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(53, 20);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(406, 86);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(87, 19);
-            this.metroLabel5.TabIndex = 8;
-            this.metroLabel5.Text = "Hausnummer";
-            // 
             // txtbMobile
             // 
             // 
@@ -325,38 +291,37 @@
             this.chbActive.Text = "Aktiv";
             this.chbActive.UseSelectable = true;
             // 
-            // metroButton1
+            // btnSave
             // 
-            this.metroButton1.Location = new System.Drawing.Point(15, 295);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(168, 38);
-            this.metroButton1.TabIndex = 14;
-            this.metroButton1.Text = "&Speichern";
-            this.metroButton1.UseSelectable = true;
+            this.btnSave.Location = new System.Drawing.Point(15, 295);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(168, 38);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "&Speichern";
+            this.btnSave.UseSelectable = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // metroButton2
+            // btnCancel
             // 
-            this.metroButton2.Location = new System.Drawing.Point(223, 295);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(168, 38);
-            this.metroButton2.TabIndex = 15;
-            this.metroButton2.Text = "&Abbrechen";
-            this.metroButton2.UseSelectable = true;
+            this.btnCancel.Location = new System.Drawing.Point(223, 295);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(168, 38);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "&Abbrechen";
+            this.btnCancel.UseSelectable = true;
             // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 344);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.ClientSize = new System.Drawing.Size(400, 344);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chbActive);
             this.Controls.Add(this.txtbMobile);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.txtbTelephone);
             this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.txtbStreet);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.txtbArea);
@@ -373,7 +338,6 @@
             this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,14 +353,12 @@
         private MetroFramework.Controls.MetroTextBox txtbArea;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroTextBox txtbStreet;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTextBox txtbMobile;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroTextBox txtbTelephone;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroCheckBox chbActive;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnSave;
+        private MetroFramework.Controls.MetroButton btnCancel;
     }
 }

@@ -33,11 +33,7 @@ namespace WorkScheduler.Classes
 
                         List<ShiftModel> employeeshifts = GetShiftsFromEmployeeByMonth(employeeId, month);
 
-                        if (employeeshifts.Count == 0)
-                        {
-                            continue;
-                        }
-
+                        
                         ShiftsModel shift = new ShiftsModel()
                         {
                             Shifts = employeeshifts,
@@ -65,18 +61,17 @@ namespace WorkScheduler.Classes
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = @"INSERT INTO Employees (firstname, surname, birthdate, telephonenumber, mobilenumber, street, region, housenumber, active)
-                    VALUES (@firstname,@surname,@birthdate,@telephonenumber,@mobilenumber,@street,@region,@housenumber,@active);";
+                command.CommandText = @"INSERT INTO Employees (firstname, surname, telephonenumber, mobilenumber, street, region, active)
+                    VALUES (@firstname,@surname,@telephonenumber,@mobilenumber,@street,@region,@active);";
 
                 command.Parameters.AddWithValue("@firstname", employee.FirstName);
                 command.Parameters.AddWithValue("@surname", employee.Surname);
-                command.Parameters.AddWithValue("@birthdate", employee.Birthdate);
                 command.Parameters.AddWithValue("@telephonenumber", employee.TelephoneNumber);
                 command.Parameters.AddWithValue("@mobilenumber", employee.MobileNumber);
                 command.Parameters.AddWithValue("@street", employee.Street);
                 command.Parameters.AddWithValue("@region", employee.Region);
                 command.Parameters.AddWithValue("@housenumber", employee.HouseNumber);
-                command.Parameters.AddWithValue("@active", employee.Active);
+                command.Parameters.AddWithValue("@active", Convert.ToInt32(employee.Active));
 
                 try
                 {
@@ -106,10 +101,10 @@ namespace WorkScheduler.Classes
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
-                    {                      
+                    {
                         int dbDay = reader.GetInt32(1);
                         int dbMonth = reader.GetInt32(2);
-                        int dbYear = reader.GetInt32(3);  
+                        int dbYear = reader.GetInt32(3);
                         DateTime date = new DateTime(dbYear, dbMonth, dbDay);
 
                         ShiftModel shift = new ShiftModel()
