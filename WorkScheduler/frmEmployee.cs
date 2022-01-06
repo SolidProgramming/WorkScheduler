@@ -77,5 +77,19 @@ namespace WorkScheduler
             txtbTelephone.Text = employee.TelephoneNumber;
             txtbMobile.Text = employee.MobileNumber;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            bool success = SQLiteController.TryDeleteEmployee(_EmployeeId);
+
+            if (!success) MessageBox.Show("Konnte nicht gelöscht werden.");
+
+            Close();
+        }
     }
 }

@@ -29,7 +29,6 @@ namespace WorkScheduler.Classes
                         int employeeId = reader.GetInt32(0);
                         string firstname = reader.GetString(1);
                         string surname = reader.GetString(2);
-                        string birthdate = reader.GetString(3);
                         string telephone = reader.GetString(4);
                         string mobile = reader.GetString(5);
                         string street = reader.GetString(6);
@@ -45,7 +44,6 @@ namespace WorkScheduler.Classes
                                 Id = employeeId,
                                 FirstName = firstname,
                                 Surname = surname,
-                                Birthdate = birthdate,
                                 TelephoneNumber = telephone,
                                 MobileNumber = mobile,
                                 Street = street,
@@ -112,6 +110,27 @@ namespace WorkScheduler.Classes
                 command.Parameters.AddWithValue("@region", employee.Region);
                 command.Parameters.AddWithValue("@housenumber", employee.HouseNumber);
                 command.Parameters.AddWithValue("@active", Convert.ToInt32(employee.Active));
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        internal static bool TryDeleteEmployee(int employeeId)
+        {
+            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                command.CommandText = $@"DELETE FROM employees WHERE id = { employeeId };";
 
                 try
                 {

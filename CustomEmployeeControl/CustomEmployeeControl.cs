@@ -26,8 +26,6 @@ namespace CustomEmployeeControl
 
             _employee = shift.Employee;
 
-            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
-
             lblEmployeeName.Text = $"{shift.Employee.Surname}, {shift.Employee.FirstName.Substring(0, 1)}";
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)

@@ -11,7 +11,6 @@ using Shared.Classes;
 using Shared.Enums;
 using System.Reflection;
 using Shared.Models;
-using Shared.Classes;
 
 namespace CustomShiftControl
 {
@@ -20,8 +19,6 @@ namespace CustomShiftControl
         public CustomShiftControl(List<ShiftModel> shifts, int column)
         {
             InitializeComponent();
-
-            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
 
             ShiftLabel.UseCustomBackColor = true;
 
