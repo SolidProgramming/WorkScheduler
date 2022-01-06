@@ -20,29 +20,37 @@ namespace WorkScheduler.Classes
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = $@"select id, firstname, surname FROM employees WHERE active = 1;";
+                command.CommandText = $@"SELECT * FROM employees WHERE active = 1;";
 
                 using (var reader = command.ExecuteReader())
                 {
-
                     while (reader.Read())
                     {
                         int employeeId = reader.GetInt32(0);
                         string firstname = reader.GetString(1);
                         string surname = reader.GetString(2);
+                        string birthdate = reader.GetString(3);
+                        string telephone = reader.GetString(4);
+                        string mobile = reader.GetString(5);
+                        string street = reader.GetString(6);
+                        string region = reader.GetString(7);
+                        bool active = Convert.ToBoolean(reader.GetInt32(9));
 
-                        List<ShiftModel> employeeshifts = GetShiftsFromEmployeeByMonth(employeeId, month);
-
-                        
                         ShiftsModel shift = new ShiftsModel()
                         {
-                            Shifts = employeeshifts,
+                            Shifts = GetShiftsFromEmployeeByMonth(employeeId, month),
 
                             Employee = new EmployeeModel()
                             {
                                 Id = employeeId,
                                 FirstName = firstname,
-                                Surname = surname
+                                Surname = surname,
+                                Birthdate = birthdate,
+                                TelephoneNumber = telephone,
+                                MobileNumber = mobile,
+                                Street = street,
+                                Region = region,
+                                Active = active
                             }
                         };
 
@@ -63,6 +71,38 @@ namespace WorkScheduler.Classes
                 SqliteCommand command = connection.CreateCommand();
                 command.CommandText = @"INSERT INTO Employees (firstname, surname, telephonenumber, mobilenumber, street, region, active)
                     VALUES (@firstname,@surname,@telephonenumber,@mobilenumber,@street,@region,@active);";
+
+                command.Parameters.AddWithValue("@firstname", employee.FirstName);
+                command.Parameters.AddWithValue("@surname", employee.Surname);
+                command.Parameters.AddWithValue("@telephonenumber", employee.TelephoneNumber);
+                command.Parameters.AddWithValue("@mobilenumber", employee.MobileNumber);
+                command.Parameters.AddWithValue("@street", employee.Street);
+                command.Parameters.AddWithValue("@region", employee.Region);
+                command.Parameters.AddWithValue("@housenumber", employee.HouseNumber);
+                command.Parameters.AddWithValue("@active", Convert.ToInt32(employee.Active));
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        internal static bool TryUpdateEmployee(EmployeeModel employee)
+        {
+            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                command.CommandText = $@"UPDATE Employees SET firstname = @firstname, surname = @surname, telephonenumber = @telephonenumber,
+                                        mobilenumber = @mobilenumber, street = @street, region = @region, active = @active 
+                                        WHERE id = {employee.Id};";
 
                 command.Parameters.AddWithValue("@firstname", employee.FirstName);
                 command.Parameters.AddWithValue("@surname", employee.Surname);

@@ -90,6 +90,8 @@ namespace WorkScheduler
 
         private void LoadShifts(int month)
         {
+            pnlShifts.Controls.Clear();
+
             List<ShiftsModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
 
             int locationY = 0;
@@ -100,8 +102,10 @@ namespace WorkScheduler
             {
                 EmployeeControl employeeControl = new EmployeeControl(shift)
                 {
-                    Location = new Point(0, locationY)
+                    Location = new Point(0, locationY)   
                 };
+
+                employeeControl.OnEmployeeDoubleClick += EmployeeControl_OnEmployeeDoubleClick;
 
                 pnlShifts.Controls.Add(employeeControl);
 
@@ -111,10 +115,16 @@ namespace WorkScheduler
             pnlShifts.ResumeLayout();
         }
 
+        private void EmployeeControl_OnEmployeeDoubleClick(EmployeeModel employee)
+        {
+            frmEmployee frmEmployee = new frmEmployee(employee);
+            frmEmployee.ShowDialog();
+
+            LoadShifts(customMonthCalender1.SelectedMonth);
+        }
+
         private void customMonthCalender1_OnMonthChanged(int month)
         {
-            pnlShifts.Controls.Clear();
-
             LoadShifts(customMonthCalender1.SelectedMonth);
         }
     }

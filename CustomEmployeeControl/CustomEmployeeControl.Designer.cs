@@ -86,6 +86,7 @@
             this.lblEmployeeName.Size = new System.Drawing.Size(94, 28);
             this.lblEmployeeName.TabIndex = 0;
             this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmployeeName.DoubleClick += new System.EventHandler(this.lblEmployeeName_DoubleClick);
             // 
             // EmployeeControl
             // 

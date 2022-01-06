@@ -46,6 +46,7 @@
     <Compile Include="Classes\Globals.cs" />
     <Compile Include="Classes\Shift.cs" />
     <Compile Include="Classes\ShiftHelper.cs" />
+    <Compile Include="Enums\ControlMode.cs" />
     <Compile Include="Enums\ShiftType.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\ShiftModel.cs" />

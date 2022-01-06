@@ -15,9 +15,16 @@ namespace CustomEmployeeControl
 {
     public partial class EmployeeControl : UserControl
     {
+        public delegate void OnEmployeeDoubleClickEvent(EmployeeModel employee);
+        public event OnEmployeeDoubleClickEvent OnEmployeeDoubleClick;
+
+        private EmployeeModel _employee;
+
         public EmployeeControl(ShiftsModel shift)
         {
             InitializeComponent();
+
+            _employee = shift.Employee;
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
 
@@ -31,5 +38,9 @@ namespace CustomEmployeeControl
             }
         }
 
+        private void lblEmployeeName_DoubleClick(object sender, EventArgs e)
+        {
+            OnEmployeeDoubleClick(_employee);
+        }
     }
 }
