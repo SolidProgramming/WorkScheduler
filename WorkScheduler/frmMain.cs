@@ -12,6 +12,7 @@ using Shared.Enums;
 using Shared.Classes;
 using WorkScheduler.Classes;
 using Shared.Models;
+using CustomEmployeeControl;
 
 namespace WorkScheduler
 {
@@ -21,18 +22,31 @@ namespace WorkScheduler
         {
             InitializeComponent();
 
-            pnlEmployees.AutoScroll = false;
-            pnlEmployees.HorizontalScroll.Enabled = false;
-            pnlEmployees.HorizontalScroll.Visible = false;
-            pnlEmployees.HorizontalScroll.Maximum = 0;
-            pnlEmployees.AutoScroll = true;
+            pnlShifts.AutoScroll = false;
+            pnlShifts.HorizontalScroll.Enabled = false;
+            pnlShifts.HorizontalScroll.Visible = false;
+            pnlShifts.HorizontalScroll.Maximum = 0;
+            pnlShifts.AutoScroll = true;
         }
 
         private Shift Shift = new Shift();
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            SQLiteController.LoadEmployeesWithSchedules();            
+            List<ShiftModel> shifts = SQLiteController.LoadEmployeesWithSchedules();
+
+            int locationY = 0;
+
+            foreach (ShiftModel shift in shifts)
+            {
+                EmployeeControl employeeControl = new EmployeeControl(shift);
+
+                employeeControl.Location = new Point(0, locationY);
+                pnlShifts.Controls.Add(employeeControl);
+
+                locationY += 28;
+            }
+
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)

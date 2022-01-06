@@ -73,6 +73,10 @@
       <Project>{54108934-c8d8-4c69-9e72-b48bb7193097}</Project>
       <Name>CustomShiftControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{56e46eb9-ffbb-48b4-9baa-b50f35811a50}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

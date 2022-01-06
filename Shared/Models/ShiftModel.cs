@@ -12,6 +12,6 @@ namespace Shared.Models
         public string Name { get; set; }
         public string Date { get; set; }
 
-        public EmployeeModel EmployeeModel { get; set; }
+        public EmployeeModel Employee { get; set; }
     }
 }

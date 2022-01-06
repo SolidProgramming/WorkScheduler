@@ -41,7 +41,7 @@ namespace WorkScheduler.Classes
                             Date = date,
                             Name = shiftname,
 
-                            EmployeeModel = new EmployeeModel()
+                            Employee = new EmployeeModel()
                             {
                                 Id = employeeId,
                                 FirstName = firstname,

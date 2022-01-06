@@ -42,8 +42,7 @@
             this.btnNachschicht = new MetroFramework.Controls.MetroButton();
             this.btnNoShift = new MetroFramework.Controls.MetroButton();
             this.btnVacation = new MetroFramework.Controls.MetroButton();
-            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
-            this.pnlEmployees = new System.Windows.Forms.Panel();
+            this.pnlShifts = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroLabel31 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel30 = new MetroFramework.Controls.MetroLabel();
@@ -76,9 +75,8 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.customEmployeeControl1 = new CustomEmployeeControl.CustomEmployeeControl();
+            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
             this.groupBox1.SuspendLayout();
-            this.pnlEmployees.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,7 +124,8 @@
             // metroCheckBox1
             // 
             this.metroCheckBox1.AutoSize = true;
-            this.metroCheckBox1.Location = new System.Drawing.Point(517, 36);
+            this.metroCheckBox1.Enabled = false;
+            this.metroCheckBox1.Location = new System.Drawing.Point(517, 37);
             this.metroCheckBox1.Name = "metroCheckBox1";
             this.metroCheckBox1.Size = new System.Drawing.Size(90, 15);
             this.metroCheckBox1.TabIndex = 11;
@@ -136,7 +135,8 @@
             // metroCheckBox2
             // 
             this.metroCheckBox2.AutoSize = true;
-            this.metroCheckBox2.Location = new System.Drawing.Point(517, 57);
+            this.metroCheckBox2.Enabled = false;
+            this.metroCheckBox2.Location = new System.Drawing.Point(517, 58);
             this.metroCheckBox2.Name = "metroCheckBox2";
             this.metroCheckBox2.Size = new System.Drawing.Size(90, 15);
             this.metroCheckBox2.TabIndex = 12;
@@ -148,7 +148,8 @@
             this.groupBox1.Controls.Add(this.metroRadioButton3);
             this.groupBox1.Controls.Add(this.metroRadioButton1);
             this.groupBox1.Controls.Add(this.metroRadioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(249, 30);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(402, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(104, 102);
             this.groupBox1.TabIndex = 13;
@@ -168,7 +169,7 @@
             // btnFrühschicht
             // 
             this.btnFrühschicht.BackColor = System.Drawing.Color.Gold;
-            this.btnFrühschicht.Location = new System.Drawing.Point(359, 36);
+            this.btnFrühschicht.Location = new System.Drawing.Point(250, 31);
             this.btnFrühschicht.Name = "btnFrühschicht";
             this.btnFrühschicht.Size = new System.Drawing.Size(70, 28);
             this.btnFrühschicht.TabIndex = 21;
@@ -181,7 +182,7 @@
             // btnSpätschicht
             // 
             this.btnSpätschicht.BackColor = System.Drawing.SystemColors.GrayText;
-            this.btnSpätschicht.Location = new System.Drawing.Point(359, 68);
+            this.btnSpätschicht.Location = new System.Drawing.Point(250, 63);
             this.btnSpätschicht.Name = "btnSpätschicht";
             this.btnSpätschicht.Size = new System.Drawing.Size(70, 28);
             this.btnSpätschicht.TabIndex = 22;
@@ -194,7 +195,7 @@
             // btnSonderschicht
             // 
             this.btnSonderschicht.BackColor = System.Drawing.Color.SlateBlue;
-            this.btnSonderschicht.Location = new System.Drawing.Point(435, 36);
+            this.btnSonderschicht.Location = new System.Drawing.Point(326, 31);
             this.btnSonderschicht.Name = "btnSonderschicht";
             this.btnSonderschicht.Size = new System.Drawing.Size(70, 28);
             this.btnSonderschicht.TabIndex = 23;
@@ -207,7 +208,7 @@
             // btnNachschicht
             // 
             this.btnNachschicht.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNachschicht.Location = new System.Drawing.Point(359, 102);
+            this.btnNachschicht.Location = new System.Drawing.Point(250, 97);
             this.btnNachschicht.Name = "btnNachschicht";
             this.btnNachschicht.Size = new System.Drawing.Size(70, 28);
             this.btnNachschicht.TabIndex = 24;
@@ -220,7 +221,7 @@
             // btnNoShift
             // 
             this.btnNoShift.BackColor = System.Drawing.SystemColors.Window;
-            this.btnNoShift.Location = new System.Drawing.Point(435, 102);
+            this.btnNoShift.Location = new System.Drawing.Point(326, 97);
             this.btnNoShift.Name = "btnNoShift";
             this.btnNoShift.Size = new System.Drawing.Size(70, 28);
             this.btnNoShift.TabIndex = 25;
@@ -233,7 +234,7 @@
             // btnVacation
             // 
             this.btnVacation.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnVacation.Location = new System.Drawing.Point(435, 68);
+            this.btnVacation.Location = new System.Drawing.Point(326, 63);
             this.btnVacation.Name = "btnVacation";
             this.btnVacation.Size = new System.Drawing.Size(70, 28);
             this.btnVacation.TabIndex = 26;
@@ -243,23 +244,13 @@
             this.btnVacation.UseSelectable = true;
             this.btnVacation.Click += new System.EventHandler(this.btnVacation_Click);
             // 
-            // customMonthCalender1
+            // pnlShifts
             // 
-            this.customMonthCalender1.AutoselectMonth = true;
-            this.customMonthCalender1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customMonthCalender1.Location = new System.Drawing.Point(-1, 2);
-            this.customMonthCalender1.Name = "customMonthCalender1";
-            this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
-            this.customMonthCalender1.TabIndex = 0;
-            // 
-            // pnlEmployees
-            // 
-            this.pnlEmployees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEmployees.Controls.Add(this.customEmployeeControl1);
-            this.pnlEmployees.Location = new System.Drawing.Point(3, 209);
-            this.pnlEmployees.Name = "pnlEmployees";
-            this.pnlEmployees.Size = new System.Drawing.Size(1730, 351);
-            this.pnlEmployees.TabIndex = 27;
+            this.pnlShifts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlShifts.Location = new System.Drawing.Point(3, 209);
+            this.pnlShifts.Name = "pnlShifts";
+            this.pnlShifts.Size = new System.Drawing.Size(1730, 351);
+            this.pnlShifts.TabIndex = 27;
             // 
             // tableLayoutPanel1
             // 
@@ -296,7 +287,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -328,11 +319,11 @@
             this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(111, 188);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(105, 188);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1585, 22);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1583, 22);
             this.tableLayoutPanel1.TabIndex = 21;
             // 
             // metroLabel31
@@ -645,13 +636,14 @@
             this.metroLabel1.Text = "1";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // customEmployeeControl1
+            // customMonthCalender1
             // 
-            this.customEmployeeControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customEmployeeControl1.Location = new System.Drawing.Point(6, -1);
-            this.customEmployeeControl1.Name = "customEmployeeControl1";
-            this.customEmployeeControl1.Size = new System.Drawing.Size(1695, 33);
-            this.customEmployeeControl1.TabIndex = 0;
+            this.customMonthCalender1.AutoselectMonth = true;
+            this.customMonthCalender1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.customMonthCalender1.Location = new System.Drawing.Point(-1, 2);
+            this.customMonthCalender1.Name = "customMonthCalender1";
+            this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
+            this.customMonthCalender1.TabIndex = 0;
             // 
             // frmMain
             // 
@@ -659,7 +651,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1772, 635);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pnlEmployees);
+            this.Controls.Add(this.pnlShifts);
             this.Controls.Add(this.btnVacation);
             this.Controls.Add(this.btnNoShift);
             this.Controls.Add(this.btnNachschicht);
@@ -679,7 +671,6 @@
             this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.pnlEmployees.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -703,7 +694,7 @@
         private MetroFramework.Controls.MetroButton btnNachschicht;
         private MetroFramework.Controls.MetroButton btnNoShift;
         private MetroFramework.Controls.MetroButton btnVacation;
-        private System.Windows.Forms.Panel pnlEmployees;
+        private System.Windows.Forms.Panel pnlShifts;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private MetroFramework.Controls.MetroLabel metroLabel31;
         private MetroFramework.Controls.MetroLabel metroLabel30;
@@ -736,7 +727,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private CustomEmployeeControl.CustomEmployeeControl customEmployeeControl1;
     }
 }
 

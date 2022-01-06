@@ -1,6 +1,6 @@
 ﻿namespace CustomEmployeeControl
 {
-    partial class CustomEmployeeControl
+    partial class EmployeeControl
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lblEmployeeName = new MetroFramework.Controls.MetroLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblEmployeeName, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -78,24 +78,23 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1684, 30);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // metroLabel1
+            // lblEmployeeName
             // 
-            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel1.Location = new System.Drawing.Point(4, 1);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(94, 28);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Weidmann, L";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmployeeName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblEmployeeName.Location = new System.Drawing.Point(4, 1);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(94, 28);
+            this.lblEmployeeName.TabIndex = 0;
+            this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // CustomEmployeeControl
+            // EmployeeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CustomEmployeeControl";
-            this.Size = new System.Drawing.Size(1680, 30);
+            this.Name = "EmployeeControl";
+            this.Size = new System.Drawing.Size(1685, 30);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -104,6 +103,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblEmployeeName;
     }
 }
