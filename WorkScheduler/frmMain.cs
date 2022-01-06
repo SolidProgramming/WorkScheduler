@@ -33,20 +33,7 @@ namespace WorkScheduler
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            List<ShiftModel> shifts = SQLiteController.LoadEmployeesWithSchedules();
-
-            int locationY = 0;
-
-            foreach (ShiftModel shift in shifts)
-            {
-                EmployeeControl employeeControl = new EmployeeControl(shift);
-
-                employeeControl.Location = new Point(0, locationY);
-                pnlShifts.Controls.Add(employeeControl);
-
-                locationY += 28;
-            }
-
+            LoadShifts(customMonthCalender1.SelectedMonth);
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
@@ -95,6 +82,30 @@ namespace WorkScheduler
         {
             frmEmployee frmEmployee = new frmEmployee();
             frmEmployee.ShowDialog();
+        }
+
+        private void LoadShifts(int month)
+        {
+            List<ShiftModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
+
+            int locationY = 0;
+
+            foreach (ShiftModel shift in shifts)
+            {
+                EmployeeControl employeeControl = new EmployeeControl(shift);
+
+                employeeControl.Location = new Point(0, locationY);
+                pnlShifts.Controls.Add(employeeControl);
+
+                locationY += 28;
+            }
+        }
+
+        private void customMonthCalender1_OnMonthChanged(int month)
+        {
+            pnlShifts.Controls.Clear();
+
+            LoadShifts(customMonthCalender1.SelectedMonth);
         }
     }
 }

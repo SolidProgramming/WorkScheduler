@@ -10,18 +10,19 @@ namespace WorkScheduler.Classes
 {
     internal static class SQLiteController
     {
-        internal static List<ShiftModel> LoadEmployeesWithSchedules()
+        internal static List<ShiftModel> LoadEmployeesWithSchedules(int month)
         {
-            List<ShiftModel> shifts = new List<ShiftModel>();
+            List<ShiftModel> shifts = new List<ShiftModel>();            
 
             using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
             {
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = @"select employees.id as employeeId, shifts.id as shiftId ,firstname, surname, date, shifttypes.name as shiftname FROM employees
+                command.CommandText = $@"select employees.id as employeeId, shifts.id as shiftId ,firstname, surname, shifttypes.name as shiftname, day, month, year FROM employees
                                         inner join shifts on shifts.employee_id = employees.id
-                                        inner join shifttypes on shifts.shift_type = shifttypes.id;";
+                                        inner join shifttypes on shifts.shift_type = shifttypes.id
+                                        WHERE shifts.month = {month};";
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -31,15 +32,17 @@ namespace WorkScheduler.Classes
                         int employeeId = reader.GetInt32(0);
                         int shiftId = reader.GetInt32(1);
                         string firstname = reader.GetString(2);
-                        string surname = reader.GetString(3);
-                        string date = reader.GetString(4);
-                        string shiftname = reader.GetString(5);
+                        string surname = reader.GetString(3);                        
+                        string shiftName = reader.GetString(4);
+                        string shiftDay = reader.GetString(5);
+                        string shiftMonth = reader.GetString(6);
+                        string shiftYear = reader.GetString(7);
 
                         ShiftModel shift = new ShiftModel()
                         {
                             Id = shiftId,
-                            Date = date,
-                            Name = shiftname,
+                            Date = DateTime.Parse($"{shiftDay}.{shiftMonth}.{shiftYear}"),
+                            Name = shiftName,
 
                             Employee = new EmployeeModel()
                             {
