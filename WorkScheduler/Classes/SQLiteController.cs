@@ -20,7 +20,7 @@ namespace WorkScheduler.Classes
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = $@"select id, firstname, surname FROM employees;";
+                command.CommandText = $@"select id, firstname, surname FROM employees WHERE active = 1;";
 
                 using (var reader = command.ExecuteReader())
                 {

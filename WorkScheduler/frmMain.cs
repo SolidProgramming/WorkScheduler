@@ -84,6 +84,8 @@ namespace WorkScheduler
         {
             frmEmployee frmEmployee = new frmEmployee();
             frmEmployee.ShowDialog();
+
+            LoadShifts(customMonthCalender1.SelectedMonth);
         }
 
         private void LoadShifts(int month)
