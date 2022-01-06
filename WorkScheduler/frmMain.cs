@@ -13,6 +13,7 @@ using Shared.Classes;
 using WorkScheduler.Classes;
 using Shared.Models;
 using CustomEmployeeControl;
+using System.Reflection;
 
 namespace WorkScheduler
 {
@@ -22,6 +23,7 @@ namespace WorkScheduler
         {
             InitializeComponent();
 
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlShifts, new object[] { true });
             pnlShifts.AutoScroll = false;
             pnlShifts.HorizontalScroll.Enabled = false;
             pnlShifts.HorizontalScroll.Visible = false;
@@ -90,6 +92,8 @@ namespace WorkScheduler
 
             int locationY = 0;
 
+            pnlShifts.SuspendLayout();
+
             foreach (ShiftModel shift in shifts)
             {
                 EmployeeControl employeeControl = new EmployeeControl(shift);
@@ -99,6 +103,8 @@ namespace WorkScheduler
 
                 locationY += 28;
             }
+
+            pnlShifts.ResumeLayout();
         }
 
         private void customMonthCalender1_OnMonthChanged(int month)

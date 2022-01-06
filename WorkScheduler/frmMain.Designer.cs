@@ -287,7 +287,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -679,8 +679,6 @@
         }
 
         #endregion
-
-        private CustomMonthCalendar.CustomMonthCalender customMonthCalender1;
         private MetroFramework.Controls.MetroButton btnNewEmployee;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
@@ -728,6 +726,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private CustomMonthCalendar.CustomMonthCalender customMonthCalender1;
     }
 }
 

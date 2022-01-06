@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CustomShiftControl;
 using Shared.Models;
+using System.Reflection;
 
 namespace CustomEmployeeControl
 {
@@ -17,6 +18,8 @@ namespace CustomEmployeeControl
         public EmployeeControl(ShiftModel shift)
         {
             InitializeComponent();
+
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
 
             lblEmployeeName.Text = $"{shift.Employee.Surname}, {shift.Employee.FirstName.Substring(0, 1)}";
 

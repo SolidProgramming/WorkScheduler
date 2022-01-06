@@ -16,6 +16,8 @@ namespace CustomMonthCalendar
         public delegate void OnMonthChangedEvent(int month);
         public event OnMonthChangedEvent OnMonthChanged;
 
+        [Description("Autoselect current Month")]
+        public bool AutoselectMonth { get; set; } = true;
 
         public CustomMonthCalender()
         {
@@ -31,10 +33,7 @@ namespace CustomMonthCalendar
             {
                 return new DateTime(SelectedYear, SelectedMonth, 1);
             }
-        }
-
-        [Description("Autoselect current Month")]
-        public bool AutoselectMonth { get; set; }
+        }       
 
         private void FocusAutoselectedMonth()
         {
@@ -80,7 +79,6 @@ namespace CustomMonthCalendar
                     break;
             }
         }
-
         #region Events
         private void CustomMonthCalender_Load(object sender, EventArgs e)
         {
@@ -89,8 +87,8 @@ namespace CustomMonthCalendar
             if (AutoselectMonth)
             {
                 SelectedMonth = DateTime.Now.Month;
-
-                FocusAutoselectedMonth();
+                PreviousMonth = SelectedMonth;
+                FocusAutoselectedMonth();                
             }
         }
         private void btnJanuary_Click(object sender, EventArgs e)

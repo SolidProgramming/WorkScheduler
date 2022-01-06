@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Shared.Classes;
 using Shared.Enums;
+using System.Reflection;
 
 namespace CustomShiftControl
 {
-    public partial class CustomShiftControl: UserControl
+    public partial class CustomShiftControl : UserControl
     {
         public CustomShiftControl()
         {
             InitializeComponent();
 
-            ShiftLabel.UseCustomBackColor = true;
+            typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, this, new object[] { true });
 
+            ShiftLabel.UseCustomBackColor = true;
         }
 
 
-        private Shift Shift{ get; set; }
+        private Shift Shift { get; set; }
 
         public void SetShift(Shift shift)
         {
