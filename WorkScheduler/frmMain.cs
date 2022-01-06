@@ -32,7 +32,7 @@ namespace WorkScheduler
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            SQLiteController.LoadEmployees();            
+            SQLiteController.LoadEmployeesWithSchedules();            
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
