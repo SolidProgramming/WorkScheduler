@@ -1,11 +1,12 @@
-﻿
-using Microsoft.Data.Sqlite;
+﻿using Microsoft.Data.Sqlite;
 using Shared.Classes;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Shared.Classes;
+using Shared.Models;
 
 namespace WorkScheduler.Classes
 {
@@ -131,6 +132,34 @@ namespace WorkScheduler.Classes
 
                 SqliteCommand command = connection.CreateCommand();
                 command.CommandText = $@"DELETE FROM employees WHERE id = { employeeId };";
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        internal static bool TryAddEmployeeShift()
+        {
+            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                command.CommandText = $@"INSERT INTO shifts (employee_id, shift_type, day, month, year)
+                                        VALUES (@employee_id, @shift_type, day, month, year);";
+
+                //command.Parameters.AddWithValue("@employee_id", );
+                //command.Parameters.AddWithValue("@shift_type", );
+                //command.Parameters.AddWithValue("@day", );
+                //command.Parameters.AddWithValue("@month", );
+                //command.Parameters.AddWithValue("@year", );
 
                 try
                 {
