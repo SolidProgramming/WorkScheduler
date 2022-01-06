@@ -22,6 +22,7 @@ namespace CustomMonthCalendar
             InitializeComponent();
         }
 
+        private int PreviousMonth = -1;
         public int SelectedMonth = -1;
         public int SelectedYear = -1;
         public DateTime SelectedDate
@@ -95,62 +96,62 @@ namespace CustomMonthCalendar
         private void btnJanuary_Click(object sender, EventArgs e)
         {
             SelectedMonth = 1;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnFebruary_Click(object sender, EventArgs e)
         {
             SelectedMonth = 2;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnMarch_Click(object sender, EventArgs e)
         {
             SelectedMonth = 3;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnApril_Click(object sender, EventArgs e)
         {
             SelectedMonth = 4;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnMai_Click(object sender, EventArgs e)
         {
             SelectedMonth = 5;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnJune_Click(object sender, EventArgs e)
         {
             SelectedMonth = 6;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnJuly_Click(object sender, EventArgs e)
         {
             SelectedMonth = 7;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnAugust_Click(object sender, EventArgs e)
         {
             SelectedMonth = 8;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnSeptember_Click(object sender, EventArgs e)
         {
             SelectedMonth = 9;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnOctober_Click(object sender, EventArgs e)
         {
             SelectedMonth = 10;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnNovember_Click(object sender, EventArgs e)
         {
             SelectedMonth = 11;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnDecember_Click(object sender, EventArgs e)
         {
             SelectedMonth = 12;
-            OnMonthChanged(SelectedMonth);
+            CheckMonthChanged();
         }
         private void btnYearIncrease_Click(object sender, EventArgs e)
         {
@@ -163,5 +164,15 @@ namespace CustomMonthCalendar
             lblYearSelected.Text = SelectedYear.ToString();
         }
         #endregion
+
+        private void CheckMonthChanged()
+        {
+            if (SelectedMonth != PreviousMonth)
+            {
+                OnMonthChanged(SelectedMonth);
+            }
+
+            PreviousMonth = SelectedMonth;
+        }
     }
 }
