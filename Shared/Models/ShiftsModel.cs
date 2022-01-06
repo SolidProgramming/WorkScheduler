@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    public class ShiftModel
+    public class ShiftsModel
     {
-        public int Id { get; set; }
-        public DateTime Date { get; set; }
-        public string Name { get; set; }
+        public List<ShiftModel> Shifts { get; set; }
+        public EmployeeModel Employee { get; set; }
     }
 }

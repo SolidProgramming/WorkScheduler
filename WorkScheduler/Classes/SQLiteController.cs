@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Data.Sqlite;
+using Shared.Classes;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -10,19 +11,16 @@ namespace WorkScheduler.Classes
 {
     internal static class SQLiteController
     {
-        internal static List<ShiftModel> LoadEmployeesWithSchedules(int month)
+        internal static List<ShiftsModel> LoadEmployeesWithSchedules(int month)
         {
-            List<ShiftModel> shifts = new List<ShiftModel>();            
+            List<ShiftsModel> shifts = new List<ShiftsModel>();
 
             using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
             {
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = $@"select employees.id as employeeId, shifts.id as shiftId ,firstname, surname, shifttypes.name as shiftname, day, month, year FROM employees
-                                        inner join shifts on shifts.employee_id = employees.id
-                                        inner join shifttypes on shifts.shift_type = shifttypes.id
-                                        WHERE shifts.month = {month};";
+                command.CommandText = $@"select id, firstname, surname FROM employees;";
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -30,19 +28,19 @@ namespace WorkScheduler.Classes
                     while (reader.Read())
                     {
                         int employeeId = reader.GetInt32(0);
-                        int shiftId = reader.GetInt32(1);
-                        string firstname = reader.GetString(2);
-                        string surname = reader.GetString(3);                        
-                        string shiftName = reader.GetString(4);
-                        string shiftDay = reader.GetString(5);
-                        string shiftMonth = reader.GetString(6);
-                        string shiftYear = reader.GetString(7);
+                        string firstname = reader.GetString(1);
+                        string surname = reader.GetString(2);
 
-                        ShiftModel shift = new ShiftModel()
+                        List<ShiftModel> employeeshifts = GetShiftsFromEmployeeByMonth(employeeId, month);
+
+                        if (employeeshifts.Count == 0)
                         {
-                            Id = shiftId,
-                            Date = DateTime.Parse($"{shiftDay}.{shiftMonth}.{shiftYear}"),
-                            Name = shiftName,
+                            continue;
+                        }
+
+                        ShiftsModel shift = new ShiftsModel()
+                        {
+                            Shifts = employeeshifts,
 
                             Employee = new EmployeeModel()
                             {
@@ -90,6 +88,42 @@ namespace WorkScheduler.Classes
                     return false;
                 }
             }
+        }
+
+        private static List<ShiftModel> GetShiftsFromEmployeeByMonth(int employeeId, int month)
+        {
+            List<ShiftModel> shifts = new List<ShiftModel>();
+
+            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                command.CommandText = $@"select shifts.id, day, month, year, shifttypes.name as shiftname from shifts
+                                        INNER JOIN shifttypes ON shifts.shift_type = shifttypes.id
+                                        WHERE employee_id = {employeeId} AND month = {month};";
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {                      
+                        int dbDay = reader.GetInt32(1);
+                        int dbMonth = reader.GetInt32(2);
+                        int dbYear = reader.GetInt32(3);  
+                        DateTime date = new DateTime(dbYear, dbMonth, dbDay);
+
+                        ShiftModel shift = new ShiftModel()
+                        {
+                            Id = reader.GetInt32(0),
+                            Date = date,
+                            Name = reader.GetString(4),
+                        };
+
+                        shifts.Add(shift);
+                    }
+                }
+            }
+            return shifts;
         }
     }
 }

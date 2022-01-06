@@ -15,7 +15,7 @@ namespace CustomEmployeeControl
 {
     public partial class EmployeeControl : UserControl
     {
-        public EmployeeControl(ShiftModel shift)
+        public EmployeeControl(ShiftsModel shift)
         {
             InitializeComponent();
 
@@ -25,7 +25,7 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
             {
-                Control control = new CustomShiftControl.CustomShiftControl();
+                Control control = new CustomShiftControl.CustomShiftControl(shift.Shifts);
 
                 tableLayoutPanel1.Controls.Add(control, i, 0);
             }

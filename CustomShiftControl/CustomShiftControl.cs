@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using Shared.Classes;
 using Shared.Enums;
 using System.Reflection;
+using Shared.Models;
 
 namespace CustomShiftControl
 {
     public partial class CustomShiftControl : UserControl
     {
-        public CustomShiftControl()
+        public CustomShiftControl(List<ShiftModel> shift)
         {
             InitializeComponent();
 

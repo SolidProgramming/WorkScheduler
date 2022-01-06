@@ -88,17 +88,19 @@ namespace WorkScheduler
 
         private void LoadShifts(int month)
         {
-            List<ShiftModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
+            List<ShiftsModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
 
             int locationY = 0;
 
             pnlShifts.SuspendLayout();
 
-            foreach (ShiftModel shift in shifts)
+            foreach (ShiftsModel shift in shifts)
             {
-                EmployeeControl employeeControl = new EmployeeControl(shift);
+                EmployeeControl employeeControl = new EmployeeControl(shift)
+                {
+                    Location = new Point(0, locationY)
+                };
 
-                employeeControl.Location = new Point(0, locationY);
                 pnlShifts.Controls.Add(employeeControl);
 
                 locationY += 28;

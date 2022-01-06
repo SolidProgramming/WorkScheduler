@@ -47,6 +47,7 @@
     <Compile Include="Enums\ShiftType.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\ShiftModel.cs" />
+    <Compile Include="Models\ShiftsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
