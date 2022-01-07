@@ -162,7 +162,6 @@ namespace CustomMonthCalendar
             lblYearSelected.Text = SelectedYear.ToString();
         }
         #endregion
-
         private void CheckMonthChanged()
         {
             if (SelectedMonth != PreviousMonth)

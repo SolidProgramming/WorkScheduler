@@ -19,41 +19,31 @@ namespace CustomShiftControl
         public delegate void OnShiftInsertEvent(ShiftModel shift);
         public event OnShiftInsertEvent OnShiftInsert;
 
-        public ShiftControl(List<ShiftModel> shifts, int column)
+        private int TargetDay = -1;
+
+        public ShiftControl(List<ShiftModel> shifts, int day)
         {
             InitializeComponent();
 
             ShiftLabel.UseCustomBackColor = true;
 
-            if (shifts.Count <= column)
+            if (shifts.Count < day)
             {
                 return;
             }
 
-            SetShift(shifts[column], column);
+            TargetDay = day;
+            SetShiftControl(shifts[TargetDay - 1]);
+                
         }
 
-        private ShiftModel Shift { get; set; }
+        private void SetShiftControl(ShiftModel shift)
+        {           
+            ShiftLabel.BackColor = shift.Color;            
 
-        public void SetShift(ShiftModel shift)
-        {
-            Shift = shift;
+            shift.Date.AddDays(TargetDay);            
 
-            SetShiftText();
-            SetControlColor();
-        }
-
-        public void SetShift(ShiftModel shift, int column)
-        {
-            Shift = shift;
-
-            SetShiftText();
-            SetControlColor();
-        }
-
-        private void SetShiftText()
-        {
-            switch (Shift.Type)
+            switch (shift.Type)
             {
                 case ShiftType.None:
                     ShiftLabel.Text = "-";
@@ -78,16 +68,11 @@ namespace CustomShiftControl
             }
         }
 
-        private void SetControlColor()
-        {
-            ShiftLabel.BackColor = Shift.Color;
-        }
-
         private void ShiftLabel_DoubleClick(object sender, EventArgs e)
         {
             ShiftModel shift = ShiftHelper.GetShift();
-
-            SetShift(shift);
+            
+            SetShiftControl(shift);
 
             OnShiftInsert(shift);
         }

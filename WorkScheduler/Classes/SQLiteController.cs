@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Shared.Enums;
 
 namespace WorkScheduler.Classes
 {
@@ -180,7 +181,7 @@ namespace WorkScheduler.Classes
                 connection.Open();
 
                 SqliteCommand command = connection.CreateCommand();
-                command.CommandText = $@"select shifts.id, day, month, year, shifttypes.name as shiftname from shifts
+                command.CommandText = $@"select shifts.id, day, month, year, shifttypes.name as shiftname, shifttypes.id as shiftTypeId from shifts
                                         INNER JOIN shifttypes ON shifts.shift_type = shifttypes.id
                                         WHERE employee_id = {employeeId} AND month = {month};";
 
@@ -192,12 +193,14 @@ namespace WorkScheduler.Classes
                         int dbMonth = reader.GetInt32(2);
                         int dbYear = reader.GetInt32(3);
                         DateTime date = new DateTime(dbYear, dbMonth, dbDay);
+                        int shiftTypeId = reader.GetInt32(5);
 
                         ShiftModel shift = new ShiftModel()
                         {
                             Id = reader.GetInt32(0),
                             Date = date,
                             Name = reader.GetString(4),
+                            Type = (ShiftType)shiftTypeId
                         };
 
                         shifts.Add(shift);

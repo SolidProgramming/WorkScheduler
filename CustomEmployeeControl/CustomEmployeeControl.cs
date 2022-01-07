@@ -35,7 +35,7 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
             {
-                ShiftControl shiftControl = new ShiftControl(shift.Shifts, i - 1);
+                ShiftControl shiftControl = new ShiftControl(shift.Shifts, day: i);
 
                 shiftControl.OnShiftInsert += shiftControl_OnShiftInsert;
 

@@ -31,50 +31,39 @@ namespace WorkScheduler
             pnlShifts.AutoScroll = true;
         }
 
-        private ShiftModel Shift = new ShiftModel();
-
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            LoadShifts(customMonthCalender1.SelectedMonth);
+            LoadShifts(monthCalendar.SelectedMonth);
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
-        {
-            Shift.Type = ShiftType.Early;            
-            ShiftHelper.SetShift(Shift);
+        {            
+            ShiftHelper.SetShift(BuildShift(ShiftType.Early));
         }
 
         private void btnSpätschicht_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Late;
-           
-            ShiftHelper.SetShift(Shift);
+            ShiftHelper.SetShift(BuildShift(ShiftType.Late));
         }
 
         private void btnNachschicht_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Night;
-            
-            ShiftHelper.SetShift(Shift);
+            ShiftHelper.SetShift(BuildShift(ShiftType.Night));
         }
 
         private void btnSonderschicht_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Special;
-           
-            ShiftHelper.SetShift(Shift);
+            ShiftHelper.SetShift(BuildShift(ShiftType.Special));
         }
 
         private void btnVacation_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Vacation;           
-            ShiftHelper.SetShift(Shift);
+            ShiftHelper.SetShift(BuildShift(ShiftType.Vacation));
         }
 
         private void btnNoShift_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.None;           
-            ShiftHelper.SetShift(Shift);
+            ShiftHelper.SetShift(BuildShift(ShiftType.None));
         }
 
         private void btnNewEmployee_Click(object sender, EventArgs e)
@@ -82,7 +71,7 @@ namespace WorkScheduler
             frmEmployee frmEmployee = new frmEmployee();
             frmEmployee.ShowDialog();
 
-            LoadShifts(customMonthCalender1.SelectedMonth);
+            LoadShifts(monthCalendar.SelectedMonth);
         }
 
         private void LoadShifts(int month)
@@ -115,7 +104,7 @@ namespace WorkScheduler
 
         private void EmployeeControl_OnShiftInsert(ShiftModel shift)
         {
-            Console.WriteLine(shift.Type.ToString());
+            Console.WriteLine(shift.Date);
         }
 
         private void EmployeeControl_OnEmployeeDoubleClick(EmployeeModel employee)
@@ -123,12 +112,29 @@ namespace WorkScheduler
             frmEmployee frmEmployee = new frmEmployee(employee);
             frmEmployee.ShowDialog();
 
-            LoadShifts(customMonthCalender1.SelectedMonth);
+            LoadShifts(monthCalendar.SelectedMonth);
         }
 
         private void customMonthCalender1_OnMonthChanged(int month)
         {
-            LoadShifts(customMonthCalender1.SelectedMonth);
+            ShiftModel oldshift = ShiftHelper.GetShift();
+            ShiftModel newShift = oldshift;
+
+            newShift.Date = new DateTime(oldshift.Date.Year, monthCalendar.SelectedMonth, oldshift.Date.Day);
+
+            ShiftHelper.SetShift(newShift);
+            LoadShifts(monthCalendar.SelectedMonth);
+        }
+
+        private ShiftModel BuildShift(ShiftType shiftType)
+        {
+            ShiftModel shift = new ShiftModel
+            {
+                Type = shiftType,
+                Date = monthCalendar.SelectedDate
+            };
+
+            return shift;
         }
     }
 }

@@ -75,7 +75,7 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.customMonthCalender1 = new CustomMonthCalendar.CustomMonthCalender();
+            this.monthCalendar = new CustomMonthCalendar.CustomMonthCalender();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -287,7 +287,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Controls.Add(this.metroLabel31, 30, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel30, 29, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroLabel29, 28, 0);
@@ -636,15 +636,15 @@
             this.metroLabel1.Text = "1";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // customMonthCalender1
+            // monthCalendar
             // 
-            this.customMonthCalender1.AutoselectMonth = true;
-            this.customMonthCalender1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.customMonthCalender1.Location = new System.Drawing.Point(-1, 2);
-            this.customMonthCalender1.Name = "customMonthCalender1";
-            this.customMonthCalender1.Size = new System.Drawing.Size(245, 183);
-            this.customMonthCalender1.TabIndex = 0;
-            this.customMonthCalender1.OnMonthChanged += new CustomMonthCalendar.CustomMonthCalender.OnMonthChangedEvent(this.customMonthCalender1_OnMonthChanged);
+            this.monthCalendar.AutoselectMonth = true;
+            this.monthCalendar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.monthCalendar.Location = new System.Drawing.Point(-1, 2);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.Size = new System.Drawing.Size(245, 183);
+            this.monthCalendar.TabIndex = 0;
+            this.monthCalendar.OnMonthChanged += new CustomMonthCalendar.CustomMonthCalender.OnMonthChangedEvent(this.customMonthCalender1_OnMonthChanged);
             // 
             // frmMain
             // 
@@ -664,7 +664,7 @@
             this.Controls.Add(this.metroCheckBox2);
             this.Controls.Add(this.metroCheckBox1);
             this.Controls.Add(this.btnNewEmployee);
-            this.Controls.Add(this.customMonthCalender1);
+            this.Controls.Add(this.monthCalendar);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Resizable = false;
@@ -726,7 +726,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private CustomMonthCalendar.CustomMonthCalender customMonthCalender1;
+        private CustomMonthCalendar.CustomMonthCalender monthCalendar;
     }
 }
 
