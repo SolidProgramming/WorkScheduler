@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CustomShiftControl;
 using Shared.Models;
 using System.Reflection;
+using Shared.Classes;
+using Shared.Enums;
 
 namespace CustomEmployeeControl
 {
@@ -17,6 +19,9 @@ namespace CustomEmployeeControl
     {
         public delegate void OnEmployeeDoubleClickEvent(EmployeeModel employee);
         public event OnEmployeeDoubleClickEvent OnEmployeeDoubleClick;
+
+        public delegate void OnShiftInsertEvent(ShiftModel shift);
+        public event OnShiftInsertEvent OnShiftInsert;
 
         private EmployeeModel _employee;
 
@@ -30,10 +35,17 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
             {
-                Control control = new CustomShiftControl.CustomShiftControl(shift.Shifts, i - 1);
+                ShiftControl shiftControl = new ShiftControl(shift.Shifts, i - 1);
 
-                tableLayoutPanel1.Controls.Add(control, i, 0);
+                shiftControl.OnShiftInsert += shiftControl_OnShiftInsert;
+
+                tableLayoutPanel1.Controls.Add(shiftControl, i, 0);
             }
+        }
+
+        private void shiftControl_OnShiftInsert(ShiftModel shift)
+        {
+            OnShiftInsert(shift);
         }
 
         private void lblEmployeeName_DoubleClick(object sender, EventArgs e)

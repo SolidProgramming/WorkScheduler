@@ -14,9 +14,12 @@ using Shared.Models;
 
 namespace CustomShiftControl
 {
-    public partial class CustomShiftControl : UserControl
+    public partial class ShiftControl : UserControl
     {
-        public CustomShiftControl(List<ShiftModel> shifts, int column)
+        public delegate void OnShiftInsertEvent(ShiftModel shift);
+        public event OnShiftInsertEvent OnShiftInsert;
+
+        public ShiftControl(List<ShiftModel> shifts, int column)
         {
             InitializeComponent();
 
@@ -30,10 +33,9 @@ namespace CustomShiftControl
             SetShift(shifts[column], column);
         }
 
+        private ShiftModel Shift { get; set; }
 
-        private Shift Shift { get; set; }
-
-        public void SetShift(Shift shift)
+        public void SetShift(ShiftModel shift)
         {
             Shift = shift;
 
@@ -43,12 +45,11 @@ namespace CustomShiftControl
 
         public void SetShift(ShiftModel shift, int column)
         {
-            Shift = shift.ToShift();
+            Shift = shift;
 
             SetShiftText();
             SetControlColor();
         }
-
 
         private void SetShiftText()
         {
@@ -84,9 +85,13 @@ namespace CustomShiftControl
 
         private void ShiftLabel_DoubleClick(object sender, EventArgs e)
         {
-            SetShift(ShiftHelper.GetShift());
+            ShiftModel shift = ShiftHelper.GetShift();
+
+            SetShift(shift);
+
+            OnShiftInsert(shift);
         }
 
-        
+
     }
 }

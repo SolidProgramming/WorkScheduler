@@ -1,6 +1,6 @@
 ﻿namespace CustomShiftControl
 {
-    partial class CustomShiftControl
+    partial class ShiftControl
     {
         /// <summary>
         /// Erforderliche Designervariable.

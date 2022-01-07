@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Shared.Classes;
-using Shared.Models;
 
 namespace WorkScheduler.Classes
 {
@@ -145,7 +143,7 @@ namespace WorkScheduler.Classes
             }
         }
 
-        internal static bool TryAddEmployeeShift()
+        internal static bool TryAddEmployeeShift(int employeeId, ShiftModel shift)
         {
             using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
             {
@@ -155,11 +153,11 @@ namespace WorkScheduler.Classes
                 command.CommandText = $@"INSERT INTO shifts (employee_id, shift_type, day, month, year)
                                         VALUES (@employee_id, @shift_type, day, month, year);";
 
-                //command.Parameters.AddWithValue("@employee_id", );
-                //command.Parameters.AddWithValue("@shift_type", );
-                //command.Parameters.AddWithValue("@day", );
-                //command.Parameters.AddWithValue("@month", );
-                //command.Parameters.AddWithValue("@year", );
+                command.Parameters.AddWithValue("@employee_id", employeeId);
+                command.Parameters.AddWithValue("@shift_type", shift.Type);
+                command.Parameters.AddWithValue("@day", shift.Date.Day);
+                command.Parameters.AddWithValue("@month", shift.Date.Month);
+                command.Parameters.AddWithValue("@year", shift.Date.Year);
 
                 try
                 {

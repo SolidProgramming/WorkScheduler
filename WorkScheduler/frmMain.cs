@@ -31,7 +31,7 @@ namespace WorkScheduler
             pnlShifts.AutoScroll = true;
         }
 
-        private Shift Shift = new Shift();
+        private ShiftModel Shift = new ShiftModel();
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
@@ -40,43 +40,40 @@ namespace WorkScheduler
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Early;
-            Shift.Color = btnFrühschicht.BackColor;
+            Shift.Type = ShiftType.Early;            
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnSpätschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Late;
-            Shift.Color = btnSpätschicht.BackColor;
+           
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnNachschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Night;
-            Shift.Color = btnNachschicht.BackColor;
+            
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnSonderschicht_Click(object sender, EventArgs e)
         {
             Shift.Type = ShiftType.Special;
-            Shift.Color = btnSonderschicht.BackColor;
+           
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnVacation_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.Vacation;
-            Shift.Color = btnVacation.BackColor;
+            Shift.Type = ShiftType.Vacation;           
             ShiftHelper.SetShift(Shift);
         }
 
         private void btnNoShift_Click(object sender, EventArgs e)
         {
-            Shift.Type = ShiftType.None;
-            Shift.Color = btnNoShift.BackColor;
+            Shift.Type = ShiftType.None;           
             ShiftHelper.SetShift(Shift);
         }
 
@@ -102,10 +99,11 @@ namespace WorkScheduler
             {
                 EmployeeControl employeeControl = new EmployeeControl(shift)
                 {
-                    Location = new Point(0, locationY)   
+                    Location = new Point(0, locationY)
                 };
 
                 employeeControl.OnEmployeeDoubleClick += EmployeeControl_OnEmployeeDoubleClick;
+                employeeControl.OnShiftInsert += EmployeeControl_OnShiftInsert;
 
                 pnlShifts.Controls.Add(employeeControl);
 
@@ -113,6 +111,11 @@ namespace WorkScheduler
             }
 
             pnlShifts.ResumeLayout();
+        }
+
+        private void EmployeeControl_OnShiftInsert(ShiftModel shift)
+        {
+            Console.WriteLine(shift.Type.ToString());
         }
 
         private void EmployeeControl_OnEmployeeDoubleClick(EmployeeModel employee)

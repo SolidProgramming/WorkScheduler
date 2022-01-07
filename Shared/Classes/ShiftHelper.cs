@@ -4,19 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Shared.Enums;
+using Shared.Models;
 
 namespace Shared.Classes
 {
     public static class ShiftHelper
     {
-        private static Shift Shift { get; set; } = new Shift() { Type = ShiftType.None};
+        private static ShiftModel Shift { get; set; } = new ShiftModel() { Type = ShiftType.None};
 
-        public static void SetShift(Shift shift)
+        public static void SetShift(ShiftModel shift)
         {
             Shift = shift;
         }
 
-        public static Shift GetShift()
+        public static ShiftModel GetShift()
         {
             return Shift;
         }
