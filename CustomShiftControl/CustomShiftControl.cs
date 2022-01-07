@@ -30,20 +30,17 @@ namespace CustomShiftControl
             TargetDay = day;
             EmployeeId = employeeId;
 
-            if (shifts.Count < day)
-            {
-                return;
-            }
-            
-            SetShiftControl(shifts[TargetDay - 1]);
+            ShiftModel targetShift = shifts.SingleOrDefault(_ => _.Date.Day == TargetDay);
+
+            if (targetShift is null) return;
+
+            SetShiftControl(targetShift);
                 
         }
 
         private void SetShiftControl(ShiftModel shift)
         {           
             ShiftLabel.BackColor = shift.Color;            
-
-            shift.Date.AddDays(TargetDay);            
 
             switch (shift.Type)
             {
