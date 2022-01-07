@@ -102,9 +102,9 @@ namespace WorkScheduler
             pnlShifts.ResumeLayout();
         }
 
-        private void EmployeeControl_OnShiftInsert(ShiftModel shift)
+        private void EmployeeControl_OnShiftInsert(int employeeId, ShiftModel shift)
         {
-            Console.WriteLine(shift.Date);
+            SQLiteController.TryAddEmployeeShift(employeeId, shift);
         }
 
         private void EmployeeControl_OnEmployeeDoubleClick(EmployeeModel employee)
@@ -117,13 +117,17 @@ namespace WorkScheduler
 
         private void customMonthCalender1_OnMonthChanged(int month)
         {
+            LoadShifts(monthCalendar.SelectedMonth);
+
             ShiftModel oldshift = ShiftHelper.GetShift();
+
+            if (oldshift == null) return;
+
             ShiftModel newShift = oldshift;
 
             newShift.Date = new DateTime(oldshift.Date.Year, monthCalendar.SelectedMonth, oldshift.Date.Day);
 
-            ShiftHelper.SetShift(newShift);
-            LoadShifts(monthCalendar.SelectedMonth);
+            ShiftHelper.SetShift(newShift);            
         }
 
         private ShiftModel BuildShift(ShiftType shiftType)
@@ -131,7 +135,8 @@ namespace WorkScheduler
             ShiftModel shift = new ShiftModel
             {
                 Type = shiftType,
-                Date = monthCalendar.SelectedDate
+                Date = monthCalendar.SelectedDate,
+                Name = ShiftHelper.GetShifName(shiftType)                
             };
 
             return shift;

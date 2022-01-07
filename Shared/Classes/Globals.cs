@@ -15,5 +15,11 @@ namespace Shared.Classes
         public static readonly Color SpecialShiftColor = Color.SlateBlue;
         public static readonly Color VacationShiftColor = Color.GreenYellow;
         public static readonly Color NoShiftColor = Color.White;
+        public static readonly string EarlyShiftName = "F";
+        public static readonly string LateShiftName = "S";
+        public static readonly string NightShiftName = "N";
+        public static readonly string SpecialShiftName = "SO";
+        public static readonly string VacationShiftName = "U";
+        public static readonly string NoShiftName = "-";
     }
 }

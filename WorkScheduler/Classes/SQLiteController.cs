@@ -152,10 +152,10 @@ namespace WorkScheduler.Classes
 
                 SqliteCommand command = connection.CreateCommand();
                 command.CommandText = $@"INSERT INTO shifts (employee_id, shift_type, day, month, year)
-                                        VALUES (@employee_id, @shift_type, day, month, year);";
+                                        VALUES (@employee_id, @shift_type, @day, @month, @year);";
 
                 command.Parameters.AddWithValue("@employee_id", employeeId);
-                command.Parameters.AddWithValue("@shift_type", shift.Type);
+                command.Parameters.AddWithValue("@shift_type", (int)shift.Type);
                 command.Parameters.AddWithValue("@day", shift.Date.Day);
                 command.Parameters.AddWithValue("@month", shift.Date.Month);
                 command.Parameters.AddWithValue("@year", shift.Date.Year);

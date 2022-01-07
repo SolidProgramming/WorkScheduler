@@ -10,7 +10,7 @@ namespace Shared.Classes
 {
     public static class ShiftHelper
     {
-        private static ShiftModel Shift { get; set; } = new ShiftModel() { Type = ShiftType.None};
+        private static ShiftModel Shift { get; set; }
 
         public static void SetShift(ShiftModel shift)
         {
@@ -20,6 +20,27 @@ namespace Shared.Classes
         public static ShiftModel GetShift()
         {
             return Shift;
+        }
+
+        public static string GetShifName(ShiftType shiftType)
+        {
+            switch (shiftType)
+            {
+                case ShiftType.None:
+                    return Globals.NoShiftName;
+                case ShiftType.Early:
+                    return Globals.EarlyShiftName;
+                case ShiftType.Late:
+                    return Globals.LateShiftName;
+                case ShiftType.Night:
+                   return Globals.NightShiftName;
+                case ShiftType.Special:
+                   return Globals.SpecialShiftName;
+                case ShiftType.Vacation:
+                    return Globals.VacationShiftName;
+                default:
+                    return Globals.NoShiftName;
+            }
         }
     }
 }

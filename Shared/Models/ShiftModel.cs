@@ -26,7 +26,6 @@ namespace Shared.Models
                 Color = value;
             }
         }
-
         private Color DetermineColor(ShiftType shiftType)
         {
             switch (shiftType)

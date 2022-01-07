@@ -20,7 +20,7 @@ namespace CustomEmployeeControl
         public delegate void OnEmployeeDoubleClickEvent(EmployeeModel employee);
         public event OnEmployeeDoubleClickEvent OnEmployeeDoubleClick;
 
-        public delegate void OnShiftInsertEvent(ShiftModel shift);
+        public delegate void OnShiftInsertEvent(int employeeId, ShiftModel shift);
         public event OnShiftInsertEvent OnShiftInsert;
 
         private EmployeeModel _employee;
@@ -35,7 +35,7 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
             {
-                ShiftControl shiftControl = new ShiftControl(shift.Shifts, day: i);
+                ShiftControl shiftControl = new ShiftControl(shift.Employee.Id, shift.Shifts, day: i);
 
                 shiftControl.OnShiftInsert += shiftControl_OnShiftInsert;
 
@@ -43,9 +43,9 @@ namespace CustomEmployeeControl
             }
         }
 
-        private void shiftControl_OnShiftInsert(ShiftModel shift)
+        private void shiftControl_OnShiftInsert(int employeeId, ShiftModel shift)
         {
-            OnShiftInsert(shift);
+            OnShiftInsert(employeeId, shift);
         }
 
         private void lblEmployeeName_DoubleClick(object sender, EventArgs e)

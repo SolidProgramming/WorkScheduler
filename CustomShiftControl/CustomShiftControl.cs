@@ -16,23 +16,25 @@ namespace CustomShiftControl
 {
     public partial class ShiftControl : UserControl
     {
-        public delegate void OnShiftInsertEvent(ShiftModel shift);
+        public delegate void OnShiftInsertEvent(int employeeId, ShiftModel shift);
         public event OnShiftInsertEvent OnShiftInsert;
 
         private int TargetDay = -1;
+        private int EmployeeId = -1;
 
-        public ShiftControl(List<ShiftModel> shifts, int day)
+        public ShiftControl(int employeeId, List<ShiftModel> shifts, int day)
         {
             InitializeComponent();
 
             ShiftLabel.UseCustomBackColor = true;
+            TargetDay = day;
+            EmployeeId = employeeId;
 
             if (shifts.Count < day)
             {
                 return;
             }
-
-            TargetDay = day;
+            
             SetShiftControl(shifts[TargetDay - 1]);
                 
         }
@@ -70,13 +72,17 @@ namespace CustomShiftControl
 
         private void ShiftLabel_DoubleClick(object sender, EventArgs e)
         {
-            ShiftModel shift = ShiftHelper.GetShift();
-            
-            SetShiftControl(shift);
+            ShiftModel oldshift = ShiftHelper.GetShift();
 
-            OnShiftInsert(shift);
+            if (oldshift == null) return;
+
+            ShiftModel newShift = oldshift;
+
+            newShift.Date = new DateTime(oldshift.Date.Year, oldshift.Date.Month, TargetDay);
+
+            SetShiftControl(newShift);
+
+            OnShiftInsert(EmployeeId, newShift);
         }
-
-
     }
 }
