@@ -17,6 +17,9 @@ using System.Reflection;
 
 namespace WorkScheduler
 {
+
+    //TODO: database backup
+    //TODO: Database cleanup
     public partial class frmMain : MetroForm
     {
         public frmMain()
