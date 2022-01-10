@@ -11,11 +11,13 @@ namespace WorkScheduler.Classes
 {
     internal static class SQLiteController
     {
+        private const string DataSource = "Data Source = workscheduler.db";
+
         internal static List<ShiftsModel> LoadEmployeesWithSchedules(int month)
         {
             List<ShiftsModel> shifts = new List<ShiftsModel>();
 
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 
@@ -62,7 +64,7 @@ namespace WorkScheduler.Classes
 
         internal static bool TryAddEmployee(EmployeeModel employee)
         {
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 
@@ -93,7 +95,7 @@ namespace WorkScheduler.Classes
 
         internal static bool TryUpdateEmployee(EmployeeModel employee)
         {
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 
@@ -125,7 +127,7 @@ namespace WorkScheduler.Classes
 
         internal static bool TryDeleteEmployee(int employeeId)
         {
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 
@@ -146,7 +148,7 @@ namespace WorkScheduler.Classes
 
         internal static bool TryAddEmployeeShift(int employeeId, ShiftModel shift)
         {
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 
@@ -172,11 +174,32 @@ namespace WorkScheduler.Classes
             }
         }
 
+        internal static bool TryDeleteShift(int shiftId)
+        {
+            using (var connection = new SqliteConnection(DataSource))
+            {
+                connection.Open();
+
+                SqliteCommand command = connection.CreateCommand();
+                command.CommandText = $@"DELETE FROM shifts WHERE id = { shiftId };";
+
+                try
+                {
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
         private static List<ShiftModel> GetShiftsFromEmployeeByMonth(int employeeId, int month)
         {
             List<ShiftModel> shifts = new List<ShiftModel>();
 
-            using (var connection = new SqliteConnection("Data Source=workscheduler.db"))
+            using (var connection = new SqliteConnection(DataSource))
             {
                 connection.Open();
 

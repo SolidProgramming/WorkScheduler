@@ -104,6 +104,13 @@ namespace WorkScheduler
 
         private void EmployeeControl_OnShiftInsert(int employeeId, ShiftModel shift)
         {
+            if (shift.Type == ShiftType.None)
+            {
+                SQLiteController.TryDeleteShift(shift.Id);
+
+                return;
+            }
+
             SQLiteController.TryAddEmployeeShift(employeeId, shift);
         }
 

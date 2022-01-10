@@ -21,6 +21,7 @@ namespace CustomShiftControl
 
         private int TargetDay = -1;
         private int EmployeeId = -1;
+        private int ShiftId = -1;
 
         public ShiftControl(int employeeId, List<ShiftModel> shifts, int day)
         {
@@ -28,12 +29,13 @@ namespace CustomShiftControl
 
             ShiftLabel.UseCustomBackColor = true;
             TargetDay = day;
-            EmployeeId = employeeId;
+            EmployeeId = employeeId;           
 
             ShiftModel targetShift = shifts.SingleOrDefault(_ => _.Date.Day == TargetDay);
 
             if (targetShift is null) return;
 
+            ShiftId = targetShift.Id;
             SetShiftControl(targetShift);
                 
         }
@@ -74,6 +76,7 @@ namespace CustomShiftControl
             if (oldshift == null) return;
 
             ShiftModel newShift = oldshift;
+            newShift.Id = ShiftId;
 
             newShift.Date = new DateTime(oldshift.Date.Year, oldshift.Date.Month, TargetDay);
 
