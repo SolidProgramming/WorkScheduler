@@ -35,10 +35,10 @@ namespace CustomEmployeeControl
 
             for (int i = 1; i <= DateTime.DaysInMonth(year, month); i++)
             {
-                ShiftControl shiftControl = new ShiftControl(shift.Employee.Id, shift.Shifts, day: i);
+                ShiftControl shiftControl = new ShiftControl(shift.Employee.Id, shift.Shifts, day: i);                
 
                 shiftControl.OnShiftInsert += shiftControl_OnShiftInsert;
-
+               
                 tableLayoutPanel1.Controls.Add(shiftControl, i, 0);
             }
         }

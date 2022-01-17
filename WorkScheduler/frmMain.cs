@@ -15,6 +15,7 @@ using Shared.Models;
 using CustomEmployeeControl;
 using System.Reflection;
 using MetroFramework.Controls;
+using System.Globalization;
 
 namespace WorkScheduler
 {
@@ -23,6 +24,8 @@ namespace WorkScheduler
     //TODO: Database cleanup
     public partial class frmMain : MetroForm
     {
+        private CultureInfo culture = new CultureInfo("de-DE");
+
         public frmMain()
         {
             InitializeComponent();
@@ -34,6 +37,7 @@ namespace WorkScheduler
             pnlShifts.HorizontalScroll.Maximum = 0;
             pnlShifts.AutoScroll = true;
 
+
             LoadDaysPanel();
         }
 
@@ -43,7 +47,7 @@ namespace WorkScheduler
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
-        {            
+        {
             ShiftHelper.SetShift(BuildShift(ShiftType.Early));
         }
 
@@ -131,21 +135,33 @@ namespace WorkScheduler
                     Text = (i).ToString(),
                     Dock = DockStyle.Fill,
                     TextAlign = ContentAlignment.MiddleCenter,
-                    FontWeight = MetroFramework.MetroLabelWeight.Bold
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold,
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    Margin = new Padding(0, 0, 0, 0)
                 };
-
-                daysLabels.Add(dayLabel);
-
                 MetroLabel dayNameLabel = new MetroLabel()
-                {
-                    Text = (i).ToString(),
+                {                   
                     Dock = DockStyle.Fill,
                     TextAlign = ContentAlignment.MiddleCenter,
-                    FontWeight = MetroFramework.MetroLabelWeight.Bold
+                    UseCustomBackColor = true,
+                    UseCustomForeColor = true,
+                    Margin = new Padding(0, 0, 0, 0)
                 };
 
-                dayNameLabel.Text = new DateTime(year, month, day: i).DayOfWeek.ToString();
+                DayOfWeek dayOfWeek = new DateTime(year, month, day: i).DayOfWeek;
 
+                if (dayOfWeek is DayOfWeek.Saturday || dayOfWeek is DayOfWeek.Sunday)
+                {
+                    dayNameLabel.BackColor = Color.LightGray;
+                    dayLabel.BackColor = Color.LightGray;
+                }
+
+                string dayName = culture.DateTimeFormat.GetShortestDayName(dayOfWeek);
+
+                dayNameLabel.Text = dayName;
+
+                daysLabels.Add(dayLabel);
                 dayNamesLabels.Add(dayNameLabel);
             }
 
@@ -189,7 +205,7 @@ namespace WorkScheduler
 
             newShift.Date = new DateTime(oldshift.Date.Year, monthCalendar.SelectedMonth, oldshift.Date.Day);
 
-            ShiftHelper.SetShift(newShift);            
+            ShiftHelper.SetShift(newShift);
         }
 
         private ShiftModel BuildShift(ShiftType shiftType)
@@ -198,7 +214,7 @@ namespace WorkScheduler
             {
                 Type = shiftType,
                 Date = monthCalendar.SelectedDate,
-                Name = ShiftHelper.GetShifName(shiftType)                
+                Name = ShiftHelper.GetShifName(shiftType)
             };
 
             return shift;
