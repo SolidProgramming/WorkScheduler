@@ -219,7 +219,7 @@
             this.pnlShifts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlShifts.Location = new System.Drawing.Point(3, 237);
             this.pnlShifts.Name = "pnlShifts";
-            this.pnlShifts.Size = new System.Drawing.Size(1685, 323);
+            this.pnlShifts.Size = new System.Drawing.Size(1702, 323);
             this.pnlShifts.TabIndex = 27;
             // 
             // tlpDays
@@ -257,7 +257,7 @@
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tlpDays.Location = new System.Drawing.Point(105, 195);
             this.tlpDays.Name = "tlpDays";
             this.tlpDays.RowCount = 1;
@@ -310,7 +310,7 @@
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.tlpDayNames.Location = new System.Drawing.Point(105, 216);
             this.tlpDayNames.Name = "tlpDayNames";
             this.tlpDayNames.RowCount = 1;
@@ -322,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1698, 635);
+            this.ClientSize = new System.Drawing.Size(1716, 635);
             this.Controls.Add(this.tlpDayNames);
             this.Controls.Add(this.tlpDays);
             this.Controls.Add(this.pnlShifts);
