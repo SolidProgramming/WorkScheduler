@@ -109,7 +109,7 @@ namespace WorkScheduler
 
                 pnlShifts.Controls.Add(employeeControl);
 
-                locationY += 28;
+                locationY += 2*employeeControl.Height;
             }
 
             pnlShifts.ResumeLayout();
