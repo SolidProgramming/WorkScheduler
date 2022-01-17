@@ -22,6 +22,15 @@ namespace CustomMonthCalendar
         public CustomMonthCalender()
         {
             InitializeComponent();
+
+            SelectedYear = DateTime.Now.Year;
+
+            if (AutoselectMonth)
+            {
+                SelectedMonth = DateTime.Now.Month;
+                PreviousMonth = SelectedMonth;
+                FocusAutoselectedMonth();
+            }
         }
 
         private int PreviousMonth = -1;
@@ -41,6 +50,7 @@ namespace CustomMonthCalendar
             {
                 case 1:
                     btnJanuary.Focus();
+                    
                     break;
                 case 2:
                     btnFebruary.Focus();
@@ -79,18 +89,7 @@ namespace CustomMonthCalendar
                     break;
             }
         }
-        #region Events
-        private void CustomMonthCalender_Load(object sender, EventArgs e)
-        {
-            SelectedYear = DateTime.Now.Year;
-
-            if (AutoselectMonth)
-            {
-                SelectedMonth = DateTime.Now.Month;
-                PreviousMonth = SelectedMonth;
-                FocusAutoselectedMonth();                
-            }
-        }
+        #region Events        
         private void btnJanuary_Click(object sender, EventArgs e)
         {
             SelectedMonth = 1;

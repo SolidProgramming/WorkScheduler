@@ -219,7 +219,6 @@
             this.Controls.Add(this.lblYearSelected);
             this.Name = "CustomMonthCalender";
             this.Size = new System.Drawing.Size(245, 185);
-            this.Load += new System.EventHandler(this.CustomMonthCalender_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnYearIncrease)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnYearDecrease)).EndInit();
             this.ResumeLayout(false);

@@ -25,7 +25,7 @@ namespace CustomEmployeeControl
 
         private EmployeeModel _employee;
 
-        public EmployeeControl(ShiftsModel shift)
+        public EmployeeControl(ShiftsModel shift, int year, int month)
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace CustomEmployeeControl
 
             lblEmployeeName.Text = $"{shift.Employee.Surname}, {shift.Employee.FirstName.Substring(0, 1)}";
 
-            for (int i = 1; i < tableLayoutPanel1.ColumnCount; i++)
+            for (int i = 1; i <= DateTime.DaysInMonth(year, month); i++)
             {
                 ShiftControl shiftControl = new ShiftControl(shift.Employee.Id, shift.Shifts, day: i);
 

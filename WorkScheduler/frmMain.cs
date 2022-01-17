@@ -14,6 +14,7 @@ using WorkScheduler.Classes;
 using Shared.Models;
 using CustomEmployeeControl;
 using System.Reflection;
+using MetroFramework.Controls;
 
 namespace WorkScheduler
 {
@@ -32,11 +33,13 @@ namespace WorkScheduler
             pnlShifts.HorizontalScroll.Visible = false;
             pnlShifts.HorizontalScroll.Maximum = 0;
             pnlShifts.AutoScroll = true;
+
+            LoadDaysPanel();
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
-            LoadShifts(monthCalendar.SelectedMonth);
+            LoadShifts();
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)
@@ -74,11 +77,14 @@ namespace WorkScheduler
             frmEmployee frmEmployee = new frmEmployee();
             frmEmployee.ShowDialog();
 
-            LoadShifts(monthCalendar.SelectedMonth);
+            LoadShifts();
         }
 
-        private void LoadShifts(int month)
+        private void LoadShifts()
         {
+            int year = monthCalendar.SelectedYear;
+            int month = monthCalendar.SelectedMonth;
+
             pnlShifts.Controls.Clear();
 
             List<ShiftsModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
@@ -89,7 +95,7 @@ namespace WorkScheduler
 
             foreach (ShiftsModel shift in shifts)
             {
-                EmployeeControl employeeControl = new EmployeeControl(shift)
+                EmployeeControl employeeControl = new EmployeeControl(shift, year, month)
                 {
                     Location = new Point(0, locationY)
                 };
@@ -103,6 +109,51 @@ namespace WorkScheduler
             }
 
             pnlShifts.ResumeLayout();
+        }
+
+        private void LoadDaysPanel()
+        {
+            int month = monthCalendar.SelectedMonth;
+            int year = monthCalendar.SelectedYear;
+
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+
+            List<MetroLabel> daysLabels = new List<MetroLabel>();
+            List<MetroLabel> dayNamesLabels = new List<MetroLabel>();
+
+            tlpDays.Controls.Clear();
+            tlpDayNames.Controls.Clear();
+
+            for (int i = 1; i <= daysInMonth; i++)
+            {
+                MetroLabel dayLabel = new MetroLabel()
+                {
+                    Text = (i).ToString(),
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold
+                };
+
+                daysLabels.Add(dayLabel);
+
+                MetroLabel dayNameLabel = new MetroLabel()
+                {
+                    Text = (i).ToString(),
+                    Dock = DockStyle.Fill,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                    FontWeight = MetroFramework.MetroLabelWeight.Bold
+                };
+
+                dayNameLabel.Text = new DateTime(year, month, day: i).DayOfWeek.ToString();
+
+                dayNamesLabels.Add(dayNameLabel);
+            }
+
+            tlpDays.Controls.AddRange(daysLabels.ToArray());
+            tlpDayNames.Controls.AddRange(dayNamesLabels.ToArray());
+
+            daysLabels.Clear();
+            dayNamesLabels.Clear();
         }
 
         private void EmployeeControl_OnShiftInsert(int employeeId, ShiftModel shift)
@@ -122,12 +173,13 @@ namespace WorkScheduler
             frmEmployee frmEmployee = new frmEmployee(employee);
             frmEmployee.ShowDialog();
 
-            LoadShifts(monthCalendar.SelectedMonth);
+            LoadShifts();
         }
 
         private void customMonthCalender1_OnMonthChanged(int month)
         {
-            LoadShifts(monthCalendar.SelectedMonth);
+            LoadDaysPanel();
+            LoadShifts();
 
             ShiftModel oldshift = ShiftHelper.GetShift();
 
