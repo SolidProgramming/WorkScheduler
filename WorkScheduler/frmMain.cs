@@ -16,6 +16,7 @@ using CustomEmployeeControl;
 using System.Reflection;
 using MetroFramework.Controls;
 using System.Globalization;
+using AutoUpdaterDotNET;
 
 namespace WorkScheduler
 {
@@ -35,15 +36,14 @@ namespace WorkScheduler
             pnlShifts.HorizontalScroll.Enabled = false;
             pnlShifts.HorizontalScroll.Visible = false;
             pnlShifts.HorizontalScroll.Maximum = 0;
-            pnlShifts.AutoScroll = true;
-
-
-            LoadDaysPanel();
+            pnlShifts.AutoScroll = true;           
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
-        {
+        {            
             LoadShifts();
+            LoadDaysPanel();
+            AutoUpdater.Start("http://ddns.lucaweidmann.de:8085/workschedulerupdates/latest/update.xml");
         }
 
         private void btnFrühschicht_Click(object sender, EventArgs e)

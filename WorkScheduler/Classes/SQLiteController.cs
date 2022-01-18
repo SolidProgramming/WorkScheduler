@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Shared.Enums;
+using System.IO;
 
 namespace WorkScheduler.Classes
 {
@@ -193,6 +194,11 @@ namespace WorkScheduler.Classes
                     return false;
                 }
             }
+        }
+
+        private static void CheckDB()
+        {
+             
         }
 
         private static List<ShiftModel> GetShiftsFromEmployeeByMonth(int employeeId, int month)
