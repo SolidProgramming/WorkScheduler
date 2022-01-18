@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using Shared.Enums;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WorkScheduler.Classes
 {
@@ -16,6 +17,8 @@ namespace WorkScheduler.Classes
 
         internal static List<ShiftsModel> LoadEmployeesWithSchedules(int month)
         {
+
+            CheckDB();
             List<ShiftsModel> shifts = new List<ShiftsModel>();
 
             using (var connection = new SqliteConnection(DataSource))
@@ -198,7 +201,27 @@ namespace WorkScheduler.Classes
 
         private static void CheckDB()
         {
-             
+            if (!File.Exists("workscheduler.db"))
+            {
+                List<string> tableQuerys = new List<string>();
+
+                tableQuerys.Add("CREATE TABLE \"employees\" (\"id\"	INTEGER NOT NULL UNIQUE,\"firstname\"	TEXT NOT NULL,\"surname\"	TEXT NOT NULL,\"birthdate\"	TEXT,\"telephonenumber\"	TEXT,\"mobilenumber\"	TEXT,\"street\"	TEXT,\"region\"	TEXT,\"housenumber\"	INTEGER,\"active\"	INTEGER NOT NULL,    PRIMARY KEY(\"id\" AUTOINCREMENT))");
+                tableQuerys.Add("CREATE TABLE \"shifts\" (\"id\"	INTEGER NOT NULL UNIQUE,\"employee_id\"	INTEGER NOT NULL,\"shift_type\"	INTEGER NOT NULL,\"day\"	INTEGER NOT NULL,\"month\"	INTEGER NOT NULL,\"year\"	INTEGER NOT NULL,PRIMARY KEY(\"id\" AUTOINCREMENT))");
+                tableQuerys.Add("CREATE TABLE \"shifttypes\" (\"id\"	INTEGER NOT NULL UNIQUE,\"name\"	TEXT NOT NULL,PRIMARY KEY(\"id\" AUTOINCREMENT))");
+
+                using (var connection = new SqliteConnection(DataSource))
+                {
+                    connection.Open();
+
+                    for (int i = 0; i < tableQuerys.Count; i++)
+                    {
+                        SqliteCommand command = connection.CreateCommand();
+                        command.CommandText = tableQuerys[i];
+                        command.ExecuteNonQuery();
+                    }
+                    
+                }
+            } 
         }
 
         private static List<ShiftModel> GetShiftsFromEmployeeByMonth(int employeeId, int month)
