@@ -219,5 +219,22 @@ namespace WorkScheduler
 
             return shift;
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+            doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
+            doc.Print();
+        }
+
+        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Panel grd = pnlShifts;
+            Bitmap bmp = new Bitmap(grd.Width, grd.Height, grd.CreateGraphics());
+            grd.DrawToBitmap(bmp, new Rectangle(0, 0, grd.Width, grd.Height));
+            RectangleF bounds = e.PageSettings.PrintableArea;
+            float factor = ((float)bmp.Height / (float)bmp.Width);
+            e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+        }
     }
 }
