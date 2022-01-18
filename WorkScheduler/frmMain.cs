@@ -27,8 +27,9 @@ namespace WorkScheduler
     {
         private CultureInfo culture = new CultureInfo("de-DE");
 
+
         public frmMain()
-        {
+        {            
             InitializeComponent();
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlShifts, new object[] { true });
