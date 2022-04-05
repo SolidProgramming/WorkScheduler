@@ -208,6 +208,7 @@ namespace WorkScheduler.Classes
                 tableQuerys.Add("CREATE TABLE \"employees\" (\"id\"	INTEGER NOT NULL UNIQUE,\"firstname\"	TEXT NOT NULL,\"surname\"	TEXT NOT NULL,\"birthdate\"	TEXT,\"telephonenumber\"	TEXT,\"mobilenumber\"	TEXT,\"street\"	TEXT,\"region\"	TEXT,\"housenumber\"	INTEGER,\"active\"	INTEGER NOT NULL,    PRIMARY KEY(\"id\" AUTOINCREMENT))");
                 tableQuerys.Add("CREATE TABLE \"shifts\" (\"id\"	INTEGER NOT NULL UNIQUE,\"employee_id\"	INTEGER NOT NULL,\"shift_type\"	INTEGER NOT NULL,\"day\"	INTEGER NOT NULL,\"month\"	INTEGER NOT NULL,\"year\"	INTEGER NOT NULL,PRIMARY KEY(\"id\" AUTOINCREMENT))");
                 tableQuerys.Add("CREATE TABLE \"shifttypes\" (\"id\"	INTEGER NOT NULL UNIQUE,\"name\"	TEXT NOT NULL,PRIMARY KEY(\"id\" AUTOINCREMENT))");
+                tableQuerys.Add("INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('0', 'None') INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('1', 'Early') INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('2', 'Late') INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('3', 'Night') INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('4', 'Special') INSERT INTO \"shifttypes\" (\"id\", \"name\") VALUES ('5', 'Vacation');");
 
                 using (var connection = new SqliteConnection(DataSource))
                 {

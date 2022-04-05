@@ -47,6 +47,7 @@
             this.tlpDays = new System.Windows.Forms.TableLayoutPanel();
             this.monthCalendar = new CustomMonthCalendar.CustomMonthCalender();
             this.tlpDayNames = new System.Windows.Forms.TableLayoutPanel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,7 +259,7 @@
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tlpDays.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tlpDays.Location = new System.Drawing.Point(105, 195);
             this.tlpDays.Name = "tlpDays";
             this.tlpDays.RowCount = 1;
@@ -311,7 +312,7 @@
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tlpDayNames.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
             this.tlpDayNames.Location = new System.Drawing.Point(105, 216);
             this.tlpDayNames.Name = "tlpDayNames";
             this.tlpDayNames.RowCount = 1;
@@ -319,11 +320,24 @@
             this.tlpDayNames.Size = new System.Drawing.Size(1583, 22);
             this.tlpDayNames.TabIndex = 28;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.metroButton1.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.metroButton1.Location = new System.Drawing.Point(1631, 31);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(74, 21);
+            this.metroButton1.TabIndex = 29;
+            this.metroButton1.Text = "Drucker";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1716, 635);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.tlpDayNames);
             this.Controls.Add(this.tlpDays);
             this.Controls.Add(this.pnlShifts);
@@ -371,6 +385,7 @@
         private System.Windows.Forms.TableLayoutPanel tlpDays;
         private CustomMonthCalendar.CustomMonthCalender monthCalendar;
         private System.Windows.Forms.TableLayoutPanel tlpDayNames;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 

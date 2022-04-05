@@ -29,7 +29,7 @@ namespace WorkScheduler
 
 
         public frmMain()
-        {            
+        {
             InitializeComponent();
 
             typeof(Panel).InvokeMember("DoubleBuffered", BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic, null, pnlShifts, new object[] { true });
@@ -37,11 +37,11 @@ namespace WorkScheduler
             pnlShifts.HorizontalScroll.Enabled = false;
             pnlShifts.HorizontalScroll.Visible = false;
             pnlShifts.HorizontalScroll.Maximum = 0;
-            pnlShifts.AutoScroll = true;           
+            pnlShifts.AutoScroll = true;
         }
 
         private void frmMain_Shown(object sender, EventArgs e)
-        {            
+        {
             LoadShifts();
             LoadDaysPanel();
             AutoUpdater.Start("http://ddns.lucaweidmann.de:8085/workschedulerupdates/latest/update.xml");
@@ -142,7 +142,7 @@ namespace WorkScheduler
                     Margin = new Padding(0, 0, 0, 0)
                 };
                 MetroLabel dayNameLabel = new MetroLabel()
-                {                   
+                {
                     Dock = DockStyle.Fill,
                     TextAlign = ContentAlignment.MiddleCenter,
                     UseCustomBackColor = true,
@@ -223,19 +223,22 @@ namespace WorkScheduler
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
-            doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(doc_PrintPage);
-            doc.Print();
+            int year = monthCalendar.SelectedYear;
+            int month = monthCalendar.SelectedMonth;
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+
+            List<ShiftsModel> shifts = SQLiteController.LoadEmployeesWithSchedules(month);
+
+            using (ExcelHandler excel = new ExcelHandler())
+            {
+                excel.CreateFromShifts(shifts, daysInMonth);
+            }
         }
 
-        private void doc_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void metroButton1_Click(object sender, EventArgs e)
         {
-            Panel grd = pnlShifts;
-            Bitmap bmp = new Bitmap(grd.Width, grd.Height, grd.CreateGraphics());
-            grd.DrawToBitmap(bmp, new Rectangle(0, 0, grd.Width, grd.Height));
-            RectangleF bounds = e.PageSettings.PrintableArea;
-            float factor = ((float)bmp.Height / (float)bmp.Width);
-            e.Graphics.DrawImage(bmp, bounds.Left, bounds.Top, bounds.Width, factor * bounds.Width);
+            MetroForm frmPrinter = new frmPrintSelect();
+            frmPrinter.ShowDialog();
         }
     }
 }
